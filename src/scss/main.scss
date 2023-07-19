@@ -1,0 +1,16 @@
+@import 'var/function';
+@import 'var/med_query';
+
+// Component
+@import'style_comp/nav';
+
+body {
+    background-color: $color1;
+    font-family: 'montserrat', sans-serif;
+    color: $color2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
