@@ -1,19 +1,50 @@
 nav {
+  padding: 0.8em;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: center;
+  flex-direction: column;
   gap: 10px;
+  border-bottom: 2px solid #ffffff;
 }
 nav span {
-  height: 20px;
-  width: 10px;
-  background-color: aqua;
+  height: 1.5px;
+  width: 1.5em;
+  background-color: #ffffff;
 }
-nav span :nth-child(2) {
-  width: 10px;
+nav span:nth-child(2) {
+  width: 2em;
+}
+
+.hero_title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 150%;
+  padding: 0.5em 20%;
+}
+
+.hr_one {
+  width: 74%;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+.vr_three {
+  height: 5em;
+  width: 1.5px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 50%;
+}
+
+.parallax {
+  padding-top: 2em;
   background-color: aqua;
+  width: 60%;
+  margin: 0 auto;
+  height: 5em;
 }
 
 body {

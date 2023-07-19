@@ -1,17 +1,17 @@
 nav{
-    // background-color: antiquewhite;
+    padding: .8em ;
     height: 50px;
-    @include flex(center,center,center);
+    @include flex(center,center,column);
     gap: 10px;
+    border-bottom: 2px solid $color2;
 
     span{
-        height: 20px;
-        width: 10px;
-        background-color: aqua;
+        height: 1.5px;
+        width: 1.5em;
+        background-color: $color2;
 
-        :nth-child(2){
-        width: 10px;
-        background-color: aqua;
+        &:nth-child(2){
+            width: 2em;
         }
     }
 }
