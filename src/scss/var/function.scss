@@ -1,0 +1,18 @@
+// color function
+$color1:#000000;
+$color2:#ffffff; 
+$color3:#0D0D0D;
+
+// mixin
+
+@mixin text($size,$weight){
+    font-size: $size;
+    font-weight: $weight;
+} // @include text(20px,regular)
+
+@mixin flex ( $align , $justify, $direction){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+} // @include flex(center,center,center)

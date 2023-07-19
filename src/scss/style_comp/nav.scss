@@ -1,0 +1,17 @@
+nav{
+    // background-color: antiquewhite;
+    height: 50px;
+    @include flex(center,center,center);
+    gap: 10px;
+
+    span{
+        height: 20px;
+        width: 10px;
+        background-color: aqua;
+
+        :nth-child(2){
+        width: 10px;
+        background-color: aqua;
+        }
+    }
+}
