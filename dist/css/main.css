@@ -20,7 +20,7 @@ nav span:nth-child(2) {
 .hero_title {
   font-size: 32px;
   font-weight: 500;
-  line-height: 150%;
+  line-height: 250%;
   padding: 0.5em 20%;
 }
 
@@ -40,17 +40,18 @@ nav span:nth-child(2) {
 }
 
 .parallax {
-  padding-top: 2em;
   background-color: aqua;
   width: 60%;
-  margin: 0 auto;
-  height: 5em;
+  margin: 1em auto 0 auto;
+  height: 8em;
 }
 
 body {
   background-color: #000000;
   font-family: "montserrat", sans-serif;
   color: #ffffff;
+  height: 100%;
+  min-height: 100%;
 }
 
 * {
@@ -59,7 +60,7 @@ body {
 }
 
 .vertical_one {
-  height: 100vh;
+  height: 100vw;
   border-left: 2px solid #ffffff;
   position: absolute;
   left: 13%;
