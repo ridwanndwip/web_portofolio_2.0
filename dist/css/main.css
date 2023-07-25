@@ -17,33 +17,60 @@ nav span:nth-child(2) {
   width: 2em;
 }
 
+.hero {
+  width: 60%;
+  margin: 2em auto;
+}
 .hero_title {
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 250%;
-  padding: 0.5em 20%;
-}
-
-.hr_one {
-  width: 74%;
-  height: 2px;
-  background-color: #ffffff;
-  margin: 0 auto;
-}
-
-.vr_three {
-  height: 5em;
-  width: 1.5px;
-  background-color: #ffffff;
-  position: absolute;
-  left: 50%;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 170%;
 }
 
 .parallax {
   background-color: aqua;
   width: 60%;
   margin: 1em auto 0 auto;
-  height: 8em;
+  height: 200px;
+}
+
+.about {
+  width: 60%;
+  margin: 2em auto;
+}
+.about_title {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: right;
+}
+.about_desc {
+  margin-top: 5em;
+  line-height: 30px;
+  font-size: 17px;
+  font-weight: 200;
+  width: 85%;
+}
+.about_button {
+  margin-top: 3em;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  width: 200px;
+  padding: 1em 1em;
+  cursor: pointer;
+}
+.about_button a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.about_history {
+  margin-top: 3em;
+}
+.about_history .history_title {
+  margin-bottom: 1em;
+}
+.about_history .history_desc .history_line {
+  border-top: 1px solid #000000;
+  width: 50px;
 }
 
 body {
@@ -59,18 +86,40 @@ body {
   padding: 0;
 }
 
-.vertical_one {
-  height: 100vw;
+.vr_1 {
+  height: 200em;
   border-left: 2px solid #ffffff;
   position: absolute;
   left: 13%;
 }
 
-.vertical_two {
-  height: 100vh;
+.vr_2 {
+  height: 200em;
   border-right: 2px solid #ffffff;
   position: absolute;
   right: 13%;
+}
+
+.vr_3 {
+  height: 5em;
+  width: 1.5px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 50%;
+}
+
+.hr_1 {
+  width: 74%;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+.hr_2 {
+  width: 74%;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 2em auto 0 auto;
 }
 
 /*# sourceMappingURL=main.css.map */

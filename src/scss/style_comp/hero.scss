@@ -1,32 +1,20 @@
 .hero{
     // border-bottom: 2px solid $color2;
     // background-color: aqua;
+    width: 60%;
+    margin: 2em auto;
+
 
     &_title{
-        @include text(32px, 500);
-        line-height: 250%;
-        padding: .5em 20%;
+        @include text(40px, 300);
+        line-height: 170%;
+        // padding: .5em 20%;
     }
-}
-
-.hr_one{
-    width: 74%;
-    height: 2px;
-    background-color: $color2;
-    margin: 0 auto;
-}
-
-.vr_three{
-    height: 5em;
-    width: 1.5px;
-    background-color: $color2;
-    position: absolute;
-    left: 50%;
 }
 
 .parallax{
     background-color: aqua;
     width: 60%;
     margin: 1em auto 0 auto;
-    height: 8em;
+    height: 200px;
 }

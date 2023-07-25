@@ -1,0 +1,45 @@
+.about{
+    width: 60%;
+    margin: 2em auto;
+
+    &_title{
+        @include text(20px, 500);
+        text-align: right;
+    }
+
+    &_desc{
+        margin-top: 5em;
+        line-height: 30px;
+        @include text(17px, 200);
+        width: 85%;
+    }
+
+    &_button{
+        margin-top: 3em;
+        border: 1px solid $color2;
+        background-color: transparent;
+        width: 200px;
+        padding: 1em 1em;
+        cursor: pointer;
+
+        a{
+            text-decoration: none;
+            color: $color2;
+        }
+    }
+
+    &_history{
+        margin-top: 3em;
+        
+        .history_title{
+            margin-bottom: 1em;
+        }
+
+        .history_desc{
+            .history_line{
+            border-top: 1px solid $color1;
+            width: 50px;
+            }
+        }
+    }
+}

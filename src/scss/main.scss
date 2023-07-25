@@ -4,6 +4,7 @@
 // Component
 @import'style_comp/nav';
 @import'style_comp/hero';
+@import'style_comp/about';
 
 body {
     background-color: $color1;
@@ -18,16 +19,38 @@ body {
     padding: 0;
 }
 
-.vertical_one{
-    height: 100vw;
+.vr_1{
+    height: 200em;
     border-left: 2px solid $color2;
     position: absolute;
     left: 13%;
 }
 
-.vertical_two{
-    height: 100vh;
+.vr_2{
+    height: 200em;
     border-right: 2px solid $color2;
     position: absolute;
     right: 13%;
+}
+
+.vr_3{
+    height: 5em;
+    width: 1.5px;
+    background-color: $color2;
+    position: absolute;
+    left: 50%;
+}
+
+.hr_1{
+    width: 74%;
+    height: 2px;
+    background-color: $color2;
+    margin: 0 auto;
+}
+
+.hr_2{
+    width: 74%;
+    height: 2px;
+    background-color: $color2;
+    margin: 2em auto  0 auto;
 }
