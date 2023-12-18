@@ -1,0 +1,39 @@
+// Nesting
+
+-> Main adalah parent dari class container
+
+.main{
+    .container{
+        background-color:Blue;
+    }    
+}
+
+// (&) Parent Selector
+
+-> Container adalah parent dari class main
+.main{
+    
+    .container & {
+        background-color:Blue;
+    }
+    
+}
+-> Meng-generate fungsi hover/child untuk parent 
+.main{
+    &:hover{
+        backcolor:blue;
+    }
+}
+-> Meng-generate otomatis nama dari parent name
+.main{
+    & &_class1{ (nama class = main_class1)
+        backcolor: blue;
+    }
+    & &_class2{  (nama class = main_class2)
+        backcolor: red;
+    }
+}
+
+output :
+.main .main_class1 {backcolor:blue}
+.main .main_class2 {backcolor:red}

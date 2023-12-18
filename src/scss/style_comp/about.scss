@@ -2,7 +2,7 @@
     width: 60%;
     margin: 2em auto;
 
-    &_title{
+    & &_title{
         @include text(20px, 500);
         text-align: right;
     }

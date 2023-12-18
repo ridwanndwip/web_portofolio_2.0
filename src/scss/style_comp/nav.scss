@@ -1,17 +1,24 @@
-nav{
-    padding: .8em ;
-    height: 50px;
-    @include flex(center,center,column);
-    gap: 10px;
-    border-bottom: 2px solid $color2;
+.navbar{
+    background-color: $color1;
+    @include flex(center,space-evenly,row);
+    @include text(11px,100);
+    padding: 3em 0 3em 0;
+    border-bottom: 1px solid $color2;
+    color: $color4;
+    gap: 2em;
 
-    span{
-        height: 1.5px;
-        width: 1.5em;
-        background-color: $color2;
+    & &_freelance{
+        font-size: 8px;
+        display: flex;
 
-        &:nth-child(2){
-            width: 2em;
+        &_img{
+        width: 10px;
+        padding-right: 5px;
         }
+    }
+
+    & &_menu{
+        display: flex;
+        gap: 2em;
     }
 }
