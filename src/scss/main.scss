@@ -23,14 +23,18 @@ body {
     height: 200em;
     border-left: 2px solid $color2;
     position: absolute;
-    left: 8%;
+    left: 12%;
 }
 
 .vr_2{
     height: 200em;
     border-right: 2px solid $color2;
     position: absolute;
-    right: 8%;
+    right: 12%;
+
+    @include responsive(m){
+        display: none;
+    }
 }
 
 // .vr_3{
