@@ -2,14 +2,15 @@
     background-color: $color1;
     @include flex(center,space-evenly,row);
     @include text(11px,100);
-    padding: 3em 0 3em 0;
+    padding: 2em 0 2em 0;
     border-bottom: 1px solid $color2;
     color: $color4;
-    gap: 2em;
+    gap: 1em;
 
     & &_freelance{
         font-size: 8px;
         display: flex;
+        margin: 1em;
 
         &_img{
         width: 10px;

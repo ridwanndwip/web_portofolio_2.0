@@ -6,14 +6,15 @@
   flex-direction: row;
   font-size: 11px;
   font-weight: 100;
-  padding: 3em 0 3em 0;
+  padding: 2em 0 2em 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1490196078);
   color: #ffffff;
-  gap: 2em;
+  gap: 1em;
 }
 .navbar .navbar_freelance {
   font-size: 8px;
   display: flex;
+  margin: 1em;
 }
 .navbar .navbar_freelance_img {
   width: 10px;
@@ -95,14 +96,14 @@ body {
   height: 200em;
   border-left: 2px solid rgba(255, 255, 255, 0.1490196078);
   position: absolute;
-  left: 10%;
+  left: 8%;
 }
 
 .vr_2 {
   height: 200em;
   border-right: 2px solid rgba(255, 255, 255, 0.1490196078);
   position: absolute;
-  right: 10%;
+  right: 8%;
 }
 
 /*# sourceMappingURL=main.css.map */
