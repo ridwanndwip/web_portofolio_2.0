@@ -35,7 +35,7 @@
     & &_menu{
         @include text(20px, 500);
         gap: 1.5em;
-        // background-color: $color3;
+        background-color: $bgnavbar;
         top: 0;
         right: 0;
         position: absolute;
@@ -45,6 +45,9 @@
         list-style: none;
         transform: translateY(-100%);
         transition: all .8s;
+        // filter: blur(10px);
+        backdrop-filter: blur(10px);
+        // transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
         
         li{
             list-style-type: none;
