@@ -3,6 +3,7 @@
 
 // Component
 @import'style_comp/nav';
+@import'style_comp/bottom_bar';
 @import'style_comp/hero';
 @import'style_comp/about';
 
@@ -24,14 +25,16 @@ body {
     border-left: 2px solid $color2;
     position: absolute;
     left: 12%;
+    z-index: -2;
 }
 
 .vr_2{
-    height: 200em;
+    height: 20em;
     border-right: 2px solid $color2;
     position: absolute;
     right: 12%;
-
+    z-index: -2;
+    
     @include responsive(m){
         display: none;
     }

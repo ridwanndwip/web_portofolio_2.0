@@ -48,7 +48,7 @@
   width: 100%;
   list-style: none;
   transform: translateY(-100%);
-  transition: all 0.8s;
+  transition: all 0.5s;
   backdrop-filter: blur(10px);
 }
 .navbar .navbar_menu li {
@@ -88,6 +88,8 @@
   justify-content: none;
   flex-direction: column;
   position: relative;
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.79, 0.14, 0.15, 0.86);
 }
 .navbar .navbar_toggle input {
   z-index: 10;
@@ -100,25 +102,83 @@
 .navbar .navbar_toggle span {
   display: block;
   background-color: #ffffff;
-  height: 1px;
-  width: 20px;
+  height: 2px;
+  width: 30px;
   border-radius: 20px;
   margin: 4px;
+}
+.navbar .navbar_toggle span:nth-child(4) {
+  position: absolute;
+  bottom: 9.7px;
 }
 @media (min-width: 768px) {
   .navbar .navbar_toggle {
     display: none;
   }
 }
-.navbar .navbar_toggle > :nth-child(3) {
-  width: 30px;
+.navbar .navbar_toggle:has(input:checked) span:nth-child(2) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.79, 0.14, 0.15, 0.86);
 }
 .navbar .navbar_toggle:has(input:checked) span:nth-child(3) {
-  width: 15px;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.79, 0.14, 0.15, 0.86);
+}
+.navbar .navbar_toggle:has(input:checked) span:nth-child(4) {
+  transform: rotate(-45deg);
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.79, 0.14, 0.15, 0.86);
+}
+.navbar .navbar_toggle:has(input:checked) span:nth-child(5) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.79, 0.14, 0.15, 0.86);
 }
 
 .navbar .navbar_menu.seret {
   transform: translateX(0);
+  transition-timing-function: cubic-bezier(0.79, 0.14, 0.15, 0.86);
+}
+
+.BarBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding: 1.5em 0;
+  position: fixed;
+  width: 100%;
+  background-color: #222831;
+  bottom: 0;
+  list-style: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1490196078);
+  z-index: -1;
+}
+.BarBottom li {
+  display: block;
+  cursor: pointer;
+}
+.BarBottom li a img {
+  width: 20px;
+}
+@media (min-width: 768px) {
+  .BarBottom {
+    left: 0;
+    border: none;
+    height: 100%;
+    width: 11%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3em;
+  }
 }
 
 .hero {
@@ -193,13 +253,15 @@ body {
   border-left: 2px solid rgba(255, 255, 255, 0.1490196078);
   position: absolute;
   left: 12%;
+  z-index: -2;
 }
 
 .vr_2 {
-  height: 200em;
+  height: 20em;
   border-right: 2px solid rgba(255, 255, 255, 0.1490196078);
   position: absolute;
   right: 12%;
+  z-index: -2;
 }
 @media (min-width: 768px) {
   .vr_2 {
