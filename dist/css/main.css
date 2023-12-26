@@ -1,10 +1,9 @@
 .navbar {
-  background-color: #222831;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  padding: 1.3em 13% 1.3em 13%;
+  padding: 1em 13% 1em 13%;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1490196078);
   color: #ffffff;
   gap: 0.5em;
@@ -49,7 +48,7 @@
   list-style: none;
   transform: translateY(-100%);
   transition: all 0.5s;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
 }
 .navbar .navbar_menu li {
   list-style-type: none;
@@ -88,8 +87,6 @@
   justify-content: none;
   flex-direction: column;
   position: relative;
-  transition: all 0.5s;
-  transition-timing-function: cubic-bezier(0.79, 0.14, 0.15, 0.86);
 }
 .navbar .navbar_toggle input {
   z-index: 10;
@@ -101,15 +98,22 @@
 }
 .navbar .navbar_toggle span {
   display: block;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1490196078);
   height: 2px;
   width: 30px;
   border-radius: 20px;
   margin: 4px;
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.79, 0.14, 0.15, 0.86);
 }
 .navbar .navbar_toggle span:nth-child(4) {
   position: absolute;
   bottom: 9.7px;
+  width: 20px;
+  opacity: 0;
+}
+.navbar .navbar_toggle span:nth-child(3) {
+  width: 20px;
 }
 @media (min-width: 768px) {
   .navbar .navbar_toggle {
@@ -120,25 +124,22 @@
   top: 18px;
   width: 0%;
   left: 50%;
-  transition: all 0.5s;
-  transition-timing-function: cubic-bezier(0.79, 0.14, 0.15, 0.86);
 }
 .navbar .navbar_toggle:has(input:checked) span:nth-child(3) {
   transform: rotate(45deg);
-  transition: all 0.5s;
-  transition-timing-function: cubic-bezier(0.79, 0.14, 0.15, 0.86);
+  width: 25px;
+  background-color: #ffffff;
 }
 .navbar .navbar_toggle:has(input:checked) span:nth-child(4) {
   transform: rotate(-45deg);
-  transition: all 0.5s;
-  transition-timing-function: cubic-bezier(0.79, 0.14, 0.15, 0.86);
+  width: 25px;
+  opacity: 1;
+  background-color: #ffffff;
 }
 .navbar .navbar_toggle:has(input:checked) span:nth-child(5) {
   top: 18px;
   width: 0%;
   left: 50%;
-  transition: all 0.5s;
-  transition-timing-function: cubic-bezier(0.79, 0.14, 0.15, 0.86);
 }
 
 .navbar .navbar_menu.seret {
@@ -182,65 +183,59 @@
 }
 
 .hero {
-  width: 60%;
-  margin: 2em auto;
-}
-.hero_title {
-  font-size: 40px;
-  font-weight: 300;
-  line-height: 170%;
-}
-
-.parallax {
-  background-color: aqua;
-  width: 60%;
-  margin: 1em auto 0 auto;
-  height: 200px;
-}
-
-.about {
-  width: 60%;
-  margin: 2em auto;
-}
-.about .about_title {
+  padding: 1.8em 20% 1.8em 20%;
   font-size: 20px;
-  font-weight: 500;
-  text-align: right;
+  font-weight: 100;
 }
-.about_desc {
-  margin-top: 5em;
-  line-height: 30px;
-  font-size: 17px;
-  font-weight: 200;
-  width: 85%;
+.hero .hero_section {
+  line-height: 35px;
 }
-.about_button {
-  margin-top: 3em;
-  border: 1px solid rgba(255, 255, 255, 0.1490196078);
-  background-color: transparent;
-  width: 200px;
-  padding: 1em 1em;
-  cursor: pointer;
+.hero .hero_line {
+  height: 2px;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.1490196078);
+  margin-top: 1em;
 }
-.about_button a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.1490196078);
+.hero .hero_profile {
+  font-size: 7px;
+  font-weight: 100;
+  line-height: 1px;
 }
-.about_history {
-  margin-top: 3em;
+.hero .hero_profile span {
+  display: block;
+  margin-top: 5px;
 }
-.about_history .history_title {
-  margin-bottom: 1em;
+.hero .yellow_text {
+  color: #FFD369;
+  font-weight: 400;
 }
-.about_history .history_desc .history_line {
-  border-top: 1px solid #222831;
-  width: 50px;
+
+.scroll {
+  margin-left: 70%;
+}
+.scroll .yellow_text {
+  color: #FFD369;
+  font-weight: 400;
+}
+.scroll .scroll_title {
+  margin-top: -20px;
+  position: absolute;
+  display: block;
+  font-size: 7px;
+  font-weight: 100;
+  writing-mode: tb-rl;
+}
+.scroll .scroll_title:before {
+  content: "";
+  background-color: aqua;
+  width: 10px;
+  height: 2px;
 }
 
 body {
   background-color: #222831;
   font-family: "montserrat", sans-serif;
-  color: rgba(255, 255, 255, 0.1490196078);
+  color: #ffffff;
 }
 
 * {
@@ -267,6 +262,21 @@ body {
   .vr_2 {
     display: none;
   }
+}
+
+.hr_1 {
+  width: 60%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.1490196078);
+  margin-top: 1.5em;
+}
+.hr_1:after {
+  position: absolute;
+  right: 0;
+  width: 20%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.1490196078);
+  content: "";
 }
 
 /*# sourceMappingURL=main.css.map */

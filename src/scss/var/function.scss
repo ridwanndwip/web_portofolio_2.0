@@ -1,5 +1,5 @@
 // color function
-$color1:#222831;
+$BgBody:#222831;
 $color2:#ffffff26; 
 $color3:#FFD369;
 $color4:#ffffff;
@@ -18,3 +18,8 @@ $bgnavbar:#2228314d;
     justify-content: $justify;
     flex-direction: $direction;
 } // @include flex(center,center,center)5
+
+@mixin yellow_text($color : $color3, $weight : 400){
+    color: $color;
+    font-weight: $weight;
+}

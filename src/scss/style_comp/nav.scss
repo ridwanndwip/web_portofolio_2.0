@@ -1,7 +1,7 @@
 .navbar{
-    background-color: $color1;
+    // background-color: $BgBody;
     @include flex(center,center,row);
-    padding: 1.3em 13% 1.3em 13%;
+    padding: 1em 13% 1em 13%;
     border-bottom: 2px solid $color2;
     color: $color4;
     gap: .5em;
@@ -9,7 +9,6 @@
 
     @include responsive(m){
         justify-content: space-between;
-        // background-color: aqua;
         padding: 1.3em 2em 1.3em 2em;
         margin-left: 12.2%;
     }
@@ -29,7 +28,6 @@
 
         @include responsive(m){
             display: flex;
-            // background-color: black
         }
     }
 
@@ -46,9 +44,7 @@
         list-style: none;
         transform: translateY(-100%);
         transition: all .5s;
-        // filter: blur(10px);
-        backdrop-filter: blur(10px);
-        // transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+        backdrop-filter: blur(8px);
         
         li{
             list-style-type: none;
@@ -83,8 +79,6 @@
     & &_toggle{
         @include flex(center,none,column);
         position: relative;
-        transition: all .5s;
-        transition-timing-function: cubic-bezier(0.79,0.14,0.15,0.86);
 
         input{
             z-index: 10;
@@ -97,15 +91,22 @@
 
         span{
             display: block;
-            background-color: $color4;
+            background-color: $color2;
             height: 2px;
             width: 30px;
             border-radius: 20px;
             margin: 4px;
+            transition: all .5s;
+            transition-timing-function: cubic-bezier(0.79,0.14,0.15,0.86);
 
             &:nth-child(4){
                 position: absolute;
                 bottom: 9.7px;
+                width: 20px;
+                opacity: 0;
+            }
+            &:nth-child(3){
+                width: 20px;
             }
 
         }
@@ -115,37 +116,30 @@
         }
     }
 
-    // & &_toggle > :nth-child(3){
-    //     width: 30px;
-    // }
-
     // if condition toggle checked
     & &_toggle:has(input:checked) span:nth-child(2){
         top: 18px;
         width: 0%;
         left: 50%;
-        transition: all .5s;
-        transition-timing-function: cubic-bezier(0.79,0.14,0.15,0.86);
     }
     
     & &_toggle:has(input:checked) span:nth-child(3){
         transform: rotate(45deg);
-        transition: all .5s;
-        transition-timing-function: cubic-bezier(0.79,0.14,0.15,0.86);
+        width: 25px;
+        background-color: $color4;
     }
 
     & &_toggle:has(input:checked) span:nth-child(4){
         transform: rotate(-45deg);
-        transition: all .5s;
-        transition-timing-function: cubic-bezier(0.79,0.14,0.15,0.86);
+        width: 25px;
+        opacity: 1;
+        background-color: $color4;
     }
 
     & &_toggle:has(input:checked) span:nth-child(5){
         top: 18px;
         width: 0%;
         left: 50%;
-        transition: all .5s;
-        transition-timing-function: cubic-bezier(0.79,0.14,0.15,0.86);
     }
 }
 
@@ -153,5 +147,4 @@
 .navbar .navbar_menu.seret{
     transform: translateX(0);
     transition-timing-function: cubic-bezier(0.79,0.14,0.15,0.86);
-    // transition: transform 0.3s, opacity 0.3s;
 }

@@ -1,20 +1,54 @@
 .hero{
-    // border-bottom: 2px solid $color2;
-    // background-color: aqua;
-    width: 60%;
-    margin: 2em auto;
+    padding: 1.8em 20% 1.8em 20%;
+    @include text(20px, 100);
+    // color: ;
 
+    & &_section{
+        line-height: 35px
+    }
 
-    &_title{
-        @include text(40px, 300);
-        line-height: 170%;
-        // padding: .5em 20%;
+    & &_line{
+        height: 2px;
+        width: 50%;
+        background-color: $color2;
+        margin-top: 1em
+    }
+
+    & &_profile{
+        @include text(7px, 100);
+        line-height: 1px;
+
+        span{
+            display: block;
+            margin-top: 5px;
+        }
+    }
+
+    .yellow_text{
+        @include yellow_text();
     }
 }
 
-.parallax{
-    background-color: aqua;
-    width: 60%;
-    margin: 1em auto 0 auto;
-    height: 200px;
+.scroll{
+    margin-left: 70%;
+
+    .yellow_text{
+        @include yellow_text();
+    }
+
+    & &_title{
+        margin-top: -20px;
+        position: absolute;
+        display: block;
+        @include text(7px, 100);
+        writing-mode:tb-rl;
+
+        &:before{
+            content: '';
+            background-color: aqua;
+            width: 10px;
+            height: 2px;
+        }
+    }
+
 }

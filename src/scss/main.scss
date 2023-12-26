@@ -8,11 +8,9 @@
 @import'style_comp/about';
 
 body {
-    background-color: $color1;
+    background-color: $BgBody;
     font-family: 'montserrat', sans-serif;
-    color: $color2;
-    // height: 100%;
-    // min-height: 100%;
+    color: $color4;
 }
 
 * {
@@ -37,6 +35,22 @@ body {
     
     @include responsive(m){
         display: none;
+    }
+}
+
+.hr_1{
+    width: 60%;
+    height: 2px;
+    background-color: $color2;
+    margin-top: 1.5em;
+
+    &:after{
+        position: absolute;
+        right: 0;
+        width: 20%;
+        height: 2px;
+        background-color: $color2;
+        content: '';
     }
 }
 

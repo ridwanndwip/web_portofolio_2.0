@@ -28,10 +28,10 @@
 
 -> Meng-generate otomatis nama dari parent name
 .main{
-    & &_class1{ (nama class = main_class1)
+    & &_class1{ (nama class Parent = main_class1)
         backcolor: blue;
     }
-    & &_class2{  (nama class = main_class2)
+    & &_class2{  (nama class Parent = main_class2)
         backcolor: red;
     }
 }
@@ -74,5 +74,41 @@ h1{
     color:map-get($alert,'success');
 }
 
-update commit 24/12/2023
-update commit 25/12/2023
+// Sass Mixin = Kumpulan Style yang dapat kita gunakan berulang-ulang
+
+->  Simple Mixin
+
+contoh kasus = .header ul li a
+
+@mixin nama_mixin {
+    backcolor: blue;
+    margin: 0px;
+
+    //menggunakan nesting didalam mixin
+    li{
+        list-style:none;
+    }
+}
+
+- cara memanggil mixin
+
+.header ul{
+    @include nama_mixin();
+}
+
+-> argument pada mixin
+
+@mixin text($size,$weight){
+    font-size: $size;
+    font-weight: $weight;
+}
+@include text(20px,regular);
+
+atau bisa memberikan nilai default
+
+@mixin text($size : 20px,$weight){
+    font-size: $size;
+    font-weight: $weight;
+} 
+
+@include text(regular);
