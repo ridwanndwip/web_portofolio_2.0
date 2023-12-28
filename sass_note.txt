@@ -114,3 +114,4 @@ atau bisa memberikan nilai default
 @include text(regular);
 
 git update 27/12
+git update 28/12
