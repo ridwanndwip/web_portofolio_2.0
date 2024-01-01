@@ -1,45 +1,19 @@
-// .about{
-//     width: 60%;
-//     margin: 2em auto;
+.about{
+    padding: 4.5em 20% 4em 20%;
+    z-index: 0;
 
-//     & &_title{
-//         @include text(20px, 500);
-//         text-align: right;
-//     }
+    & &_title{
+        background-color: green;
+        @include text(15px, 300);
+        display: block;
 
-//     &_desc{
-//         margin-top: 5em;
-//         line-height: 30px;
-//         @include text(17px, 200);
-//         width: 85%;
-//     }
-
-//     &_button{
-//         margin-top: 3em;
-//         border: 1px solid $color2;
-//         background-color: transparent;
-//         width: 200px;
-//         padding: 1em 1em;
-//         cursor: pointer;
-
-//         a{
-//             text-decoration: none;
-//             color: $color2;
-//         }
-//     }
-
-//     &_history{
-//         margin-top: 3em;
-        
-//         .history_title{
-//             margin-bottom: 1em;
-//         }
-
-//         .history_desc{
-//             .history_line{
-//             border-top: 1px solid $color1;
-//             width: 50px;
-//             }
-//         }
-//     }
-// }
+        &:after{
+            content:'t';
+            width: 40px;
+            background-color: aqua;
+            height: 4px;
+            position: relative;
+            right: 0;
+        }
+    }
+}

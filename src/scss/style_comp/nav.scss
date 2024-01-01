@@ -1,7 +1,7 @@
 .navbar{
     // background-color: $BgBody;
     @include flex(center,center,row);
-    padding: 1em 13% 1em 13%;
+    padding: 1.5em 13% 1.5em 13%;
     border-bottom: 2px solid $color2;
     color: $color4;
     gap: .5em;
@@ -55,13 +55,24 @@
         }
 
         &_freelance{
-            padding-bottom: 20px;
+            padding-bottom: 10em;
             position: absolute;
             bottom: 0;
+            gap: .7em;
+            @include flex(center, center,row);
             @include text(10px, 300);
+            
             @include responsive(m){
                 display: none;
             }
+
+            &_img{
+                width: 8px;
+                animation-name: circle;
+                animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+            }
+
         }
 
         @include responsive(m){
@@ -79,9 +90,9 @@
     & &_toggle{
         @include flex(center,none,column);
         position: relative;
+        z-index: 1;
 
         input{
-            z-index: 10;
             position: absolute;
             width: 30px;
             height: 25px;
@@ -91,9 +102,9 @@
 
         span{
             display: block;
-            background-color: $color2;
-            height: 2px;
-            width: 30px;
+            background-color: $color4;
+            height: 1px;
+            width: 28px;
             border-radius: 20px;
             margin: 4px;
             transition: all .5s;
@@ -105,6 +116,7 @@
                 width: 20px;
                 opacity: 0;
             }
+
             &:nth-child(3){
                 width: 20px;
             }
@@ -148,3 +160,11 @@
     transform: translateX(0);
     transition-timing-function: cubic-bezier(0.79,0.14,0.15,0.86);
 }
+
+@keyframes circle {
+    0%   {opacity: 1;}
+    25%  {opacity: .5;}
+    50%  {opacity: 0;}
+    75%  {opacity: .5;}
+    100% {opacity: 1;}
+  }

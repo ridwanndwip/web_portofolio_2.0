@@ -1,5 +1,5 @@
 .hero{
-    padding: 1.8em 20% 1.8em 20%;
+    padding: 2em 20% 2em 20%;
     @include text(20px, 100);
     // color: ;
 
@@ -15,7 +15,7 @@
     }
 
     & &_profile{
-        @include text(7px, 100);
+        @include text(8px, 100);
         line-height: 1px;
 
         span{
@@ -30,23 +30,31 @@
 }
 
 .scroll{
-    margin-left: 70%;
+    margin-left: 77%;
 
     .yellow_text{
         @include yellow_text();
     }
 
     & &_title{
+        // background-color: aqua;
         z-index: -1;
-        margin-top: -20px;
+        margin-top: -15px;
         position: absolute;
         display: block;
-        @include text(7px, 100);
+        @include text(8px, 100);
         writing-mode:tb-rl;
+        text-align: center;
+        line-height: 10px;
 
         &:before{
-            content: 'testes';
-            background-color: aqua;
+            content: '';
+            width: 10px;
+            height: 2px;
+        }
+
+        &:before{
+            content: '';
             width: 10px;
             height: 2px;
         }
