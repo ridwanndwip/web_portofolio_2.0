@@ -218,6 +218,7 @@
   font-weight: 400;
 }
 .scroll .scroll_title {
+  z-index: -1;
   margin-top: -20px;
   position: absolute;
   display: block;
@@ -226,7 +227,7 @@
   writing-mode: tb-rl;
 }
 .scroll .scroll_title:before {
-  content: "";
+  content: "testes";
   background-color: aqua;
   width: 10px;
   height: 2px;
@@ -271,6 +272,7 @@ body {
   margin-top: 1.5em;
 }
 .hr_1:after {
+  z-index: -1;
   position: absolute;
   right: 0;
   width: 20%;

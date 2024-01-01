@@ -45,6 +45,7 @@ body {
     margin-top: 1.5em;
 
     &:after{
+        z-index: -1;
         position: absolute;
         right: 0;
         width: 20%;

@@ -37,6 +37,7 @@
     }
 
     & &_title{
+        z-index: -1;
         margin-top: -20px;
         position: absolute;
         display: block;
@@ -44,7 +45,7 @@
         writing-mode:tb-rl;
 
         &:before{
-            content: '';
+            content: 'testes';
             background-color: aqua;
             width: 10px;
             height: 2px;
