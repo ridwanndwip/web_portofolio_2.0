@@ -1,5 +1,5 @@
 .hero{
-    padding: 2em 20% 2em 20%;
+    padding: 2em 20% 1.8em 20%;
     @include text(20px, 100);
     // color: ;
 
@@ -11,13 +11,14 @@
         height: 2px;
         width: 50%;
         background-color: $color2;
-        margin-top: 1em
+        margin-top: .8em
     }
 
     & &_profile{
-        @include text(8px, 100);
-        line-height: 1px;
-
+        @include text(10px, 100);
+        line-height: 15px;
+        margin-top: 2em;
+        display: block;
         span{
             display: block;
             margin-top: 5px;
@@ -39,13 +40,13 @@
     & &_title{
         // background-color: aqua;
         z-index: -1;
-        margin-top: -15px;
+        margin-top: -2.2em;
         position: absolute;
         display: block;
-        @include text(8px, 100);
+        @include text(10px, 100);
         writing-mode:tb-rl;
         text-align: center;
-        line-height: 10px;
+        line-height: 15px;
 
         &:before{
             content: '';

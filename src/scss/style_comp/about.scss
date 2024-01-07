@@ -1,19 +1,76 @@
 .about{
     padding: 4.5em 20% 4em 20%;
     z-index: 0;
+    // background-color: aqua;
 
     & &_title{
-        background-color: green;
-        @include text(15px, 300);
+        @include text(14px, 100);
         display: block;
+        margin-bottom: 2.8em;
+
+        .yellow_text{
+            @include yellow_text();
+        }
 
         &:after{
-            content:'t';
-            width: 40px;
-            background-color: aqua;
-            height: 4px;
-            position: relative;
+            margin-top: 9px;
+            content:'';
+            width: 8em;
+            background-color: $color2;
+            height: 2px;
+            position: absolute;
             right: 0;
+            z-index: -1;
+        }
+
+        &:before{
+            margin-top: 2.7em;
+            content:'';
+            width: 3em;
+            background-color: $color2;
+            height: 2px;
+            position: absolute;
+            left: 20%;
+            z-index: -1;
         }
     }
+
+& &_profile{
+
+        &_desc{
+            color: $color4;
+            @include text(10px, 100);
+            line-height: 18px;
+            display: block;
+            // background-color: green;
+            // margin-right: -.5em;
+        }
+
+        &_history{
+            margin-top: 2em;
+            color: $color4;
+            @include text(10px, 100);
+            display: block;
+            
+            .history_title{
+                display: block;
+                font-weight: 500;
+                color: $color3;
+                margin-bottom: 1em;
+            }
+        }
+
+        &_button{
+            margin-top: 3.5em;
+            @include text(10px, 100);
+
+            a{
+                text-decoration: none;
+                padding: .8em 2.2em;
+                border: 1px solid $color2;
+                color: $color4;
+            }
+        }
+    }
+
 }

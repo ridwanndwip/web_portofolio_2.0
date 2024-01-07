@@ -101,6 +101,7 @@
         }
 
         span{
+            z-index: 4;
             display: block;
             background-color: $color4;
             height: 1px;
@@ -138,14 +139,16 @@
     & &_toggle:has(input:checked) span:nth-child(3){
         transform: rotate(45deg);
         width: 25px;
-        background-color: $color4;
+        background-color: $color3;
+        height: 2px;
     }
 
     & &_toggle:has(input:checked) span:nth-child(4){
         transform: rotate(-45deg);
         width: 25px;
         opacity: 1;
-        background-color: $color4;
+        background-color: $color3;
+        height: 2px;
     }
 
     & &_toggle:has(input:checked) span:nth-child(5){
