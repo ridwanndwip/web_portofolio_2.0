@@ -1,7 +1,6 @@
 .about{
     padding: 4.5em 20% 4em 20%;
     z-index: 0;
-    // background-color: aqua;
 
     & &_title{
         @include text(14px, 100);
@@ -15,7 +14,7 @@
         &:after{
             margin-top: 9px;
             content:'';
-            width: 8em;
+            width: 30%;
             background-color: $color2;
             height: 2px;
             position: absolute;
@@ -35,15 +34,13 @@
         }
     }
 
-& &_profile{
+    & &_profile{
 
         &_desc{
             color: $color4;
             @include text(10px, 100);
             line-height: 18px;
             display: block;
-            // background-color: green;
-            // margin-right: -.5em;
         }
 
         &_history{
@@ -71,6 +68,16 @@
                 color: $color4;
             }
         }
+    }
+
+    & &_image{
+        width: 160px;
+        // position: absolute;
+        // right: 5em;
+        display: block;
+        opacity: .2;
+        margin-left: 5em;
+        margin-top: -7em;
     }
 
 }

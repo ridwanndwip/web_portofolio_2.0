@@ -289,7 +289,7 @@
 .about .about_title:after {
   margin-top: 9px;
   content: "";
-  width: 8em;
+  width: 30%;
   background-color: rgba(255, 255, 255, 0.1490196078);
   height: 2px;
   position: absolute;
@@ -337,6 +337,13 @@
   border: 1px solid rgba(255, 255, 255, 0.1490196078);
   color: #ffffff;
 }
+.about .about_image {
+  width: 160px;
+  display: block;
+  opacity: 0.2;
+  margin-left: 5em;
+  margin-top: -7em;
+}
 
 body {
   background-color: #222831;
@@ -375,6 +382,14 @@ body {
   height: 2px;
   background-color: rgba(255, 255, 255, 0.1490196078);
   margin-top: 1.5em;
+}
+
+.hr_2 {
+  width: 70%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.1490196078);
+  position: relative;
+  right: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
