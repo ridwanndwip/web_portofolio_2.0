@@ -1,38 +1,6 @@
 .about{
-    padding: 4.5em 20% 4em 20%;
+    padding: 3em 20% 4em 20%;
     z-index: 0;
-
-    & &_title{
-        @include text(14px, 100);
-        display: block;
-        margin-bottom: 2.8em;
-
-        .yellow_text{
-            @include yellow_text();
-        }
-
-        &:after{
-            margin-top: 9px;
-            content:'';
-            width: 30%;
-            background-color: $color2;
-            height: 2px;
-            position: absolute;
-            right: 0;
-            z-index: -1;
-        }
-
-        &:before{
-            margin-top: 2.7em;
-            content:'';
-            width: 3em;
-            background-color: $color2;
-            height: 2px;
-            position: absolute;
-            left: 20%;
-            z-index: -1;
-        }
-    }
 
     & &_profile{
 

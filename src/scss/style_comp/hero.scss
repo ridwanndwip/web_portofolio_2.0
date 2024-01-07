@@ -29,35 +29,3 @@
         @include yellow_text();
     }
 }
-
-.scroll{
-    margin-left: 77%;
-
-    .yellow_text{
-        @include yellow_text();
-    }
-
-    & &_title{
-        // background-color: aqua;
-        z-index: -1;
-        margin-top: -2.2em;
-        position: absolute;
-        display: block;
-        @include text(10px, 100);
-        writing-mode:tb-rl;
-        text-align: center;
-        line-height: 15px;
-
-        &:before{
-            content: '';
-            width: 10px;
-            height: 2px;
-        }
-
-        &:before{
-            content: '';
-            width: 10px;
-            height: 2px;
-        }
-    }
-}

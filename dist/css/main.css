@@ -243,68 +243,9 @@
   font-weight: 400;
 }
 
-.scroll {
-  margin-left: 77%;
-}
-.scroll .yellow_text {
-  color: #FFD369;
-  font-weight: 400;
-}
-.scroll .scroll_title {
-  z-index: -1;
-  margin-top: -2.2em;
-  position: absolute;
-  display: block;
-  font-size: 10px;
-  font-weight: 100;
-  writing-mode: tb-rl;
-  text-align: center;
-  line-height: 15px;
-}
-.scroll .scroll_title:before {
-  content: "";
-  width: 10px;
-  height: 2px;
-}
-.scroll .scroll_title:before {
-  content: "";
-  width: 10px;
-  height: 2px;
-}
-
 .about {
-  padding: 4.5em 20% 4em 20%;
+  padding: 3em 20% 4em 20%;
   z-index: 0;
-}
-.about .about_title {
-  font-size: 14px;
-  font-weight: 100;
-  display: block;
-  margin-bottom: 2.8em;
-}
-.about .about_title .yellow_text {
-  color: #FFD369;
-  font-weight: 400;
-}
-.about .about_title:after {
-  margin-top: 9px;
-  content: "";
-  width: 30%;
-  background-color: rgba(255, 255, 255, 0.1490196078);
-  height: 2px;
-  position: absolute;
-  right: 0;
-  z-index: -1;
-}
-.about .about_title:before {
-  margin-top: 2.7em;
-  content: "";
-  width: 3em;
-  background-color: rgba(255, 255, 255, 0.1490196078);
-  height: 2px;
-  position: absolute;
-  left: 20%;
-  z-index: -1;
 }
 .about .about_profile_desc {
   color: #ffffff;
@@ -345,6 +286,10 @@
   margin-top: -7em;
 }
 
+.portofolio {
+  margin-top: 3em;
+}
+
 body {
   background-color: #222831;
   font-family: "montserrat", sans-serif;
@@ -379,17 +324,99 @@ body {
 
 .hr_1 {
   width: 70%;
-  height: 2px;
+  height: 1.5px;
   background-color: rgba(255, 255, 255, 0.1490196078);
   margin-top: 1.5em;
 }
 
 .hr_2 {
-  width: 70%;
+  width: 30%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.1490196078);
+  margin-top: 5.4em;
+  position: absolute;
+  right: 0;
+}
+
+.hr_3 {
+  width: 40%;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.1490196078);
   position: relative;
   right: 0;
+}
+
+.scroll_caption {
+  margin-left: 77%;
+}
+.scroll_caption .yellow_text {
+  color: #FFD369;
+  font-weight: 400;
+}
+.scroll_caption .scroll_caption_title {
+  z-index: -1;
+  margin-top: -5.5em;
+  position: absolute;
+  display: block;
+  font-size: 10px;
+  font-weight: 100;
+  writing-mode: tb-rl;
+  text-align: center;
+  line-height: 15px;
+}
+.scroll_caption .scroll_caption_title:before {
+  content: "";
+  width: 10px;
+  height: 2px;
+}
+.scroll_caption .scroll_caption_title:before {
+  content: "";
+  width: 10px;
+  height: 2px;
+}
+
+.about_caption {
+  font-size: 14px;
+  font-weight: 100;
+  margin: 5.5em 0 0 5.5em;
+  background-color: aqua;
+}
+.about_caption .yellow_text {
+  color: #FFD369;
+  font-weight: 400;
+}
+.about_caption:before {
+  margin-top: 2.5em;
+  content: "";
+  width: 3em;
+  background-color: rgba(255, 255, 255, 0.1490196078);
+  height: 2px;
+  position: absolute;
+  left: 0;
+  z-index: -1;
+}
+
+.project_caption {
+  font-size: 14px;
+  font-weight: 100;
+  position: absolute;
+  right: 5em;
+  margin-top: -0.8em;
+  background-color: aquamarine;
+}
+.project_caption .yellow_text {
+  color: #FFD369;
+  font-weight: 400;
+}
+.project_caption:before {
+  margin-top: 2em;
+  content: "";
+  width: 3em;
+  background-color: rgba(255, 255, 255, 0.1490196078);
+  height: 2px;
+  position: absolute;
+  right: 0;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=main.css.map */

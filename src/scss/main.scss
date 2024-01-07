@@ -6,6 +6,7 @@
 @import'style_comp/bottom_bar';
 @import'style_comp/hero';
 @import'style_comp/about';
+@import'style_comp/project';
 
 body {
     background-color: $BgBody;
@@ -17,6 +18,8 @@ body {
     margin: 0;
     padding: 0;
 }
+
+// VR & HR Line
 
 .vr_1{
     height: 200em;
@@ -40,7 +43,7 @@ body {
 
 .hr_1{
     width: 70%;
-    height: 2px;
+    height: 1.5px;
     background-color: $color2;
     margin-top: 1.5em;
 
@@ -56,7 +59,16 @@ body {
 }
 
 .hr_2{
-    width: 70%;
+    width: 30%;
+    height: 2px;
+    background-color: $color2;
+    margin-top: 5.4em;
+    position: absolute;
+    right: 0;
+}
+
+.hr_3{
+    width: 40%;
     height: 2px;
     background-color: $color2;
     // margin-top: 1.5em;
@@ -64,24 +76,83 @@ body {
     right: 0;
 }
 
-// .vr_3{
-//     height: 5em;
-//     width: 1.5px;
-//     background-color: $color2;
-//     position: absolute;
-//     left: 50%;
-// }
+// Caption Point
 
-// .hr_1{
-//     width: 74%;
-//     height: 2px;
-//     background-color: $color2;
-//     margin: 0 auto;
-// }
+.scroll_caption{
+    margin-left: 77%;
 
-// .hr_2{
-//     width: 74%;
-//     height: 2px;
-//     background-color: $color2;
-//     margin: 2em auto  0 auto;
-// }
+    .yellow_text{
+        @include yellow_text();
+    }
+
+    & &_title{
+        z-index: -1;
+        margin-top: -5.5em;
+        position: absolute;
+        display: block;
+        @include text(10px, 100);
+        writing-mode:tb-rl;
+        text-align: center;
+        line-height: 15px;
+
+        &:before{
+            content: '';
+            width: 10px;
+            height: 2px;
+        }
+
+        &:before{
+            content: '';
+            width: 10px;
+            height: 2px;
+        }
+    }
+}
+
+.about_caption{
+    @include text(14px, 100);
+    // display: block;
+    margin: 5.5em 0 0 5.5em;
+    background-color: aqua;
+
+    .yellow_text{
+        @include yellow_text();
+    }
+
+    &:before{
+        margin-top: 2.5em;
+        content:'';
+        width: 3em;
+        background-color: $color2;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.project_caption{
+    @include text(14px, 100);
+    // display: block;
+    // margin: 5.5em 0 0 5.5em;
+    position: absolute;
+    right: 5em;
+    margin-top: -.8em;
+    background-color: aquamarine;
+
+    .yellow_text{
+        @include yellow_text();
+    }
+
+    &:before{
+        margin-top: 2em;
+        content:'';
+        width: 3em;
+        background-color: $color2;
+        height: 2px;
+        position: absolute;
+        right: 0;
+        // left: 0;
+        z-index: -1;
+    }
+}
