@@ -355,6 +355,48 @@
   font-weight: 100;
 }
 
+.question {
+  margin-top: 2em;
+  padding: 0 20% 0 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+}
+.question .question_desc {
+  font-size: 10px;
+  font-weight: 100;
+  text-align: center;
+  line-height: 18px;
+  display: block;
+}
+.question .question_button {
+  display: block;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 100;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.1490196078);
+  padding: 0.5em 2.5em;
+}
+.question .question_copyright {
+  display: block;
+  font-size: 6px;
+  font-weight: 100;
+  text-align: center;
+  line-height: 10px;
+  margin-top: 2em;
+}
+.question .question_copyright .yellow_text {
+  color: #FFD369;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   background-color: #222831;
   font-family: "montserrat", sans-serif;
@@ -367,9 +409,9 @@ body {
 }
 
 .vr_1 {
-  height: 200em;
+  height: 100%;
   border-left: 2px solid rgba(255, 255, 255, 0.1490196078);
-  position: absolute;
+  position: fixed;
   left: 12%;
   z-index: -2;
 }
@@ -377,7 +419,7 @@ body {
 .vr_2 {
   height: 200em;
   border-right: 2px solid rgba(255, 255, 255, 0.1490196078);
-  position: absolute;
+  position: fixed;
   right: 12%;
   z-index: -2;
 }
@@ -462,7 +504,7 @@ body {
 }
 
 .project_caption {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 100;
   position: absolute;
   right: 5em;
@@ -481,6 +523,59 @@ body {
   position: absolute;
   right: 0;
   z-index: -1;
+}
+
+.project_caption {
+  font-size: 15px;
+  font-weight: 100;
+  position: absolute;
+  right: 5em;
+  margin-top: -0.8em;
+}
+.project_caption .yellow_text {
+  color: #FFD369;
+  font-weight: 400;
+}
+.project_caption:before {
+  margin-top: 2.5em;
+  content: "";
+  width: 3em;
+  background-color: rgba(255, 255, 255, 0.1490196078);
+  height: 2px;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+}
+
+.question_caption {
+  font-size: 15px;
+  font-weight: 100;
+  margin-top: 3.5em;
+  text-align: center;
+}
+.question_caption .yellow_text {
+  color: #FFD369;
+  font-weight: 400;
+}
+.question_caption:before {
+  content: "";
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.1490196078);
+  height: 2px;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  margin-top: 0.6em;
+}
+.question_caption:after {
+  content: "";
+  width: 30%;
+  background-color: rgba(255, 255, 255, 0.1490196078);
+  height: 2px;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  margin-top: 0.6em;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,32 @@
+.question{
+    margin-top: 2em;
+    padding: 0 20% 0 20%;
+    @include flex(center,center,column);
+    gap: 1em;
+    & &_desc{
+        @include text(10px, 100);
+        text-align: center;
+        line-height: 18px;
+        display: block;
+    }
+
+    & &_button{
+        display: block;
+        text-decoration: none;
+        @include text(10px, 100);
+        color: $color4;
+        border: 2px solid  $color2;
+        padding: .5em 2.5em;
+    }
+
+    & &_copyright{
+        .yellow_text{
+            color: $color3;
+        }
+        display: block;
+        @include text(6px, 100);
+        text-align: center;
+        line-height: 10px;
+        margin-top: 2em;
+    }
+}
