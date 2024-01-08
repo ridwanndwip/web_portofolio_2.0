@@ -244,7 +244,7 @@
 }
 
 .about {
-  padding: 3em 20% 4em 20%;
+  padding: 3.5em 20% 4em 20%;
   z-index: 0;
 }
 .about .about_profile_desc {
@@ -286,8 +286,18 @@
   margin-top: -7em;
 }
 
-.portofolio {
+.works {
   margin-top: 3em;
+  padding: 0 20% 0 20%;
+}
+.works_card .works_card_caption {
+  display: block;
+}
+.works_card .works_card_desc {
+  display: block;
+}
+.works_card .works_card_date {
+  display: block;
 }
 
 body {
@@ -333,7 +343,7 @@ body {
   width: 30%;
   height: 2px;
   background-color: rgba(255, 255, 255, 0.1490196078);
-  margin-top: 5.4em;
+  margin-top: 2.3em;
   position: absolute;
   right: 0;
 }
@@ -356,7 +366,7 @@ body {
 .scroll_caption .scroll_caption_title {
   z-index: -1;
   margin-top: -5.5em;
-  position: absolute;
+  position: relative;
   display: block;
   font-size: 10px;
   font-weight: 100;
@@ -378,8 +388,8 @@ body {
 .about_caption {
   font-size: 14px;
   font-weight: 100;
-  margin: 5.5em 0 0 5.5em;
-  background-color: aqua;
+  margin: 2em 0 0 5.5em;
+  position: relative;
 }
 .about_caption .yellow_text {
   color: #FFD369;
@@ -402,14 +412,13 @@ body {
   position: absolute;
   right: 5em;
   margin-top: -0.8em;
-  background-color: aquamarine;
 }
 .project_caption .yellow_text {
   color: #FFD369;
   font-weight: 400;
 }
 .project_caption:before {
-  margin-top: 2em;
+  margin-top: 2.5em;
   content: "";
   width: 3em;
   background-color: rgba(255, 255, 255, 0.1490196078);

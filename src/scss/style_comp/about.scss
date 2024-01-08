@@ -1,5 +1,5 @@
 .about{
-    padding: 3em 20% 4em 20%;
+    padding: 3.5em 20% 4em 20%;
     z-index: 0;
 
     & &_profile{
@@ -40,8 +40,6 @@
 
     & &_image{
         width: 160px;
-        // position: absolute;
-        // right: 5em;
         display: block;
         opacity: .2;
         margin-left: 5em;

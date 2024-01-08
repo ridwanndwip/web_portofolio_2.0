@@ -1,3 +1,27 @@
-.portofolio{
+.works{
     margin-top: 3em;
+    padding: 0 20% 0 20%;
+
+    &_card{
+
+        & &_caption{
+            display: block;
+        }
+
+        & &_desc{
+            display: block;
+        }
+
+        & &_button{
+        }
+
+        & &_project{
+            
+        }
+
+        & &_date{
+            display: block;
+        }
+    }
+
 }
