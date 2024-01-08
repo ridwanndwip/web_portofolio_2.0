@@ -292,9 +292,26 @@
 }
 .works_card .works_card_caption {
   display: block;
+  font-size: 13px;
+  font-weight: 500;
 }
 .works_card .works_card_desc {
+  margin-top: 0.7em;
   display: block;
+  font-size: 10px;
+  font-weight: 100;
+  line-height: 18px;
+}
+.works_card .works_card_button {
+  margin: 2em 0;
+}
+.works_card .works_card_button a {
+  padding: 1em 3em;
+  border: 1px solid rgba(255, 255, 255, 0.1490196078);
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 200;
 }
 .works_card .works_card_date {
   display: block;

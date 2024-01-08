@@ -6,13 +6,25 @@
 
         & &_caption{
             display: block;
+            @include text(13px, 500);
         }
 
         & &_desc{
+            margin-top: .7em;
             display: block;
+            @include text(10px, 100);
+            line-height: 18px;
         }
 
         & &_button{
+            margin: 2em 0;
+            a{  
+                padding: 1em 3em;    
+                border: 1px solid $color2;
+                text-decoration: none;
+                color: $color4;
+                @include text(10px, 200);
+            }
         }
 
         & &_project{
