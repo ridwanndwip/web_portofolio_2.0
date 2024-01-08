@@ -286,35 +286,73 @@
   margin-top: -7em;
 }
 
-.works {
+.project {
   margin-top: 3em;
   padding: 0 20% 0 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2em;
 }
-.works_card .works_card_caption {
+.project_card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 1em;
+}
+.project_card_title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-bottom: -5em;
+  width: 87%;
+  margin-left: -10px;
+  line-height: 17px;
+}
+.project_card_title .project_card_title_caption {
   display: block;
   font-size: 13px;
   font-weight: 500;
 }
-.works_card .works_card_desc {
-  margin-top: 0.7em;
+.project_card_title .project_card_title_desc {
   display: block;
   font-size: 10px;
   font-weight: 100;
-  line-height: 18px;
 }
-.works_card .works_card_button {
-  margin: 2em 0;
-}
-.works_card .works_card_button a {
-  padding: 1em 3em;
-  border: 1px solid rgba(255, 255, 255, 0.1490196078);
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 10px;
-  font-weight: 200;
-}
-.works_card .works_card_date {
+.project_card_title .project_card_title_button {
+  border: 2px solid rgba(255, 255, 255, 0.1490196078);
+  padding: 0.3em 2.5em;
   display: block;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 100;
+}
+.project_card_image {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.project_card_image .project_card_image_portofolio {
+  width: 100%;
+  opacity: 0.2;
+  height: 90px;
+}
+.project_card_image .project_card_image_powerButton {
+  opacity: 0.9;
+  margin-top: -1.6em;
+  margin-right: 0.5em;
+}
+.project_card .project_card_date {
+  display: block;
+  margin-top: 0.3em;
+  font-size: 16px;
+  font-weight: 100;
 }
 
 body {
