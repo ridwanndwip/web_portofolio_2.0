@@ -3,12 +3,11 @@
     padding: 1.5em 0;
     position: fixed;
     width: 100%;
-    background-color: $BgBody;
-    // position: fixed;
+    background-color: $colorBgBody;
     bottom: 0;
     list-style: none;
-    border-top: 1px solid $color2;
-    z-index: 2;
+    border-top: 1px solid $colorLine;
+    z-index: 1;
 
     li{
         display: block;

@@ -15,9 +15,9 @@ body, html {
 }
 
 body {
-    background-color: $BgBody;
+    background-color: $colorBgBody;
     font-family: 'montserrat', sans-serif;
-    color: $color4;
+    color: $colorWhite;
 }
 
 * {
@@ -29,7 +29,7 @@ body {
 
 .vr_1{
     height: 100%;
-    border-left: 2px solid $color2;
+    border-left: 2px solid $colorLine;
     position: fixed;
     left: 12%;
     z-index: -2;
@@ -37,7 +37,7 @@ body {
 
 .vr_2{
     height: 200em;
-    border-right: 2px solid $color2;
+    border-right: 2px solid $colorLine;
     position: fixed;
     right: 12%;
     z-index: -2;
@@ -50,7 +50,7 @@ body {
 .hr_1{
     width: 70%;
     height: 1.5px;
-    background-color: $color2;
+    background-color: $colorLine;
     margin-top: 1.5em;
 
     // &:after{
@@ -59,7 +59,7 @@ body {
     //     right: 0;
     //     width: 30%; 
     //     height: 2px;
-    //     background-color: $color2;
+    //     background-color: $colorLine;
     //     content: '';
     // }
 }
@@ -67,7 +67,7 @@ body {
 .hr_2{
     width: 30%;
     height: 2px;
-    background-color: $color2;
+    background-color: $colorLine;
     margin-top: 2.3em;
     position: absolute;
     right: 0;
@@ -76,7 +76,7 @@ body {
 .hr_3{
     width: 40%;
     height: 2px;
-    background-color: $color2;
+    background-color: $colorLine;
     // margin-top: 1.5em;
     position: relative;
     right: 0;
@@ -130,7 +130,7 @@ body {
         margin-top: 2.5em;
         content:'';
         width: 3em;
-        background-color: $color2;
+        background-color: $colorLine;
         height: 2px;
         position: absolute;
         left: 0;
@@ -152,7 +152,7 @@ body {
         margin-top: 2.5em;
         content:'';
         width: 3em;
-        background-color: $color2;
+        background-color: $colorLine;
         height: 2px;
         position: absolute;
         right: 0;
@@ -174,7 +174,7 @@ body {
         margin-top: 2.5em;
         content:'';
         width: 3em;
-        background-color: $color2;
+        background-color: $colorLine;
         height: 2px;
         position: absolute;
         right: 0;
@@ -196,7 +196,7 @@ body {
     &:before{
         content:'';
         width: 30%;
-        background-color: $color2;
+        background-color: $colorLine;
         height: 2px;
         position: absolute;
         z-index: -1;
@@ -207,7 +207,7 @@ body {
     &:after{
         content:'';
         width: 30%;
-        background-color: $color2;
+        background-color: $colorLine;
         height: 2px;
         position: absolute;
         z-index: -1;

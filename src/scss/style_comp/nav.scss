@@ -1,12 +1,10 @@
 .navbar{
-    // background-color: $BgBody;
     @include flex(center,center,row);
     padding: 1.5em 13% 1.5em 13%;
-    border-bottom: 2px solid $color2;
-    color: $color4;
+    border-bottom: 2px solid $colorLine;
+    color: $colorWhite;
     gap: .5em;
     
-
     @include responsive(m){
         justify-content: space-between;
         padding: 1.3em 2em 1.3em 2em;
@@ -34,7 +32,7 @@
     & &_menu{
         @include text(20px, 500);
         gap: 1.5em;
-        background-color: $bgnavbar;
+        background-color: $colorBgNavbar;
         top: 0;
         right: 0;
         position: absolute;
@@ -45,12 +43,13 @@
         transform: translateY(-100%);
         transition: all .5s;
         backdrop-filter: blur(8px);
+        z-index: 2;
         
         li{
             list-style-type: none;
             a{
             text-decoration: none;
-            color: $color4;
+            color: $colorWhite;
             }
         }
 
@@ -90,7 +89,7 @@
     & &_toggle{
         @include flex(center,none,column);
         position: relative;
-        z-index: 1;
+        z-index: 2;
 
         input{
             position: absolute;
@@ -103,7 +102,7 @@
         span{
             z-index: 4;
             display: block;
-            background-color: $color4;
+            background-color: $colorWhite;
             height: 1px;
             width: 28px;
             border-radius: 20px;
@@ -139,7 +138,7 @@
     & &_toggle:has(input:checked) span:nth-child(3){
         transform: rotate(45deg);
         width: 25px;
-        background-color: $color3;
+        background-color: $colorYellow;
         height: 2px;
     }
 
@@ -147,7 +146,7 @@
         transform: rotate(-45deg);
         width: 25px;
         opacity: 1;
-        background-color: $color3;
+        background-color: $colorYellow;
         height: 2px;
     }
 

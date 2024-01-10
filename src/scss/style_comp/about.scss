@@ -5,7 +5,7 @@
     & &_profile{
 
         &_desc{
-            color: $color4;
+            color: $colorWhite;
             @include text(10px, 100);
             line-height: 18px;
             display: block;
@@ -13,14 +13,14 @@
 
         &_history{
             margin-top: 2em;
-            color: $color4;
+            color: $colorWhite;
             @include text(10px, 100);
             display: block;
             
             .history_title{
                 display: block;
                 font-weight: 500;
-                color: $color3;
+                color: $colorYellow;
                 margin-bottom: 1em;
             }
         }
@@ -32,8 +32,8 @@
             a{
                 text-decoration: none;
                 padding: .8em 2.2em;
-                border: 1px solid $color2;
-                color: $color4;
+                border: 1px solid $colorLine;
+                color: $colorWhite;
             }
         }
     }
