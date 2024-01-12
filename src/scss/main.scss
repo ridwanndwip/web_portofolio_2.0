@@ -49,43 +49,44 @@ body {
 
 .hr_1{
     width: 70%;
-    height: 1.5px;
+    height: 2px;
     background-color: $colorLine;
     margin-top: 1.5em;
-
-    // &:after{
-    //     z-index: -1;
-    //     position: absolute;
-    //     right: 0;
-    //     width: 30%; 
-    //     height: 2px;
-    //     background-color: $colorLine;
-    //     content: '';
-    // }
 }
 
 .hr_2{
-    width: 30%;
+    width: 25%;
     height: 2px;
     background-color: $colorLine;
-    margin-top: 2.3em;
+    margin-top: 2.5em;
     position: absolute;
     right: 0;
+
+    @include responsive(xs){
+        width: 30%;
+    }
+
+    @include responsive(s){
+        width: 31%;
+    }
 }
 
 .hr_3{
-    width: 40%;
+    width: 35%;
     height: 2px;
     background-color: $colorLine;
-    // margin-top: 1.5em;
     position: relative;
     right: 0;
+
+    @include responsive(xs){
+        width: 40%;
+    }
 }
 
 // Caption Point
 
 .scroll_caption{
-    margin-left: 77%;
+    margin-left: 78%;
 
     .yellow_text{
         @include yellow_text();
@@ -101,10 +102,9 @@ body {
         text-align: center;
         line-height: 15px;
 
-        &:before{
-            content: '';
-            width: 10px;
-            height: 2px;
+        @include responsive(s){
+            font-size: 11px;
+            line-height: 18px;
         }
 
         &:before{
@@ -116,11 +116,18 @@ body {
 }
 
 .about_caption{
-    @include text(14px, 100);
-    margin: 2em 0 0 5.5em;
-    // background-color: aqua;
+    @include text(15px, 100);
+    margin: 2em 0 0 20%;
     position: relative;
+    @include responsive(xs){
+        font-size: 17px;
+        margin-top: 1.7em
+    }
 
+    @include responsive(s){
+        font-size: 20px;
+        margin-top: 1.3em
+    }
 
     .yellow_text{
         @include yellow_text();
@@ -135,14 +142,26 @@ body {
         position: absolute;
         left: 0;
         z-index: -1;
+
+        @include responsive(xs){
+            margin-top: 2.3em;
+        }
     }
 }
 
 .project_caption{
     @include text(15px, 100);
     position: absolute;
-    right: 5em;
+    right: 20%;
     margin-top: -.8em;
+    @include responsive(xs){
+        font-size: 17px;
+    }
+
+    @include responsive(s){
+        font-size: 20px;
+    }
+
 
     .yellow_text{
         @include yellow_text();
@@ -157,37 +176,26 @@ body {
         position: absolute;
         right: 0;
         z-index: -1;
-    }
-}
 
-.project_caption{
-    @include text(15px, 100);
-    position: absolute;
-    right: 5em;
-    margin-top: -.8em;
-
-    .yellow_text{
-        @include yellow_text();
-    }
-
-    &:before{
-        margin-top: 2.5em;
-        content:'';
-        width: 3em;
-        background-color: $colorLine;
-        height: 2px;
-        position: absolute;
-        right: 0;
-        z-index: -1;
+        @include responsive(xs){
+            margin-top: 2.3em;
+        }
     }
 }
 
 .question_caption{
     @include text(15px, 100);
-    // position: absolute;
-    // right: 5em;
     margin-top: 3.5em;
     text-align: center;
+
+    @include responsive(xs){
+        font-size: 17px;
+    }
+
+    @include responsive(s){
+        font-size: 20px;
+    }
+
 
     .yellow_text{
         @include yellow_text();

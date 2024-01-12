@@ -1,24 +1,44 @@
 .hero{
     padding: 2em 20% 1.8em 20%;
-    @include text(20px, 100);
-    // color: ;
+    @include text(25px, 100);
+
+    @include responsive(s){
+        font-size: 30px;
+    }
 
     & &_section{
-        line-height: 35px
+        line-height: 35px;
+        margin-bottom: -.5em;
+        display: block;
+
+        @include responsive(s){
+            line-height: 40px;
+        }
     }
 
     & &_line{
         height: 2px;
         width: 50%;
         background-color: $colorLine;
-        margin-top: .8em
+        margin-top: 1em;
+
+        @include responsive(s){
+            margin-top: 1.3em
+        }
     }
 
     & &_profile{
         @include text(10px, 100);
-        line-height: 15px;
-        margin-top: 2em;
+        line-height: 13px;
+        margin-top: 1.2em;
         display: block;
+
+        @include responsive(s){
+            font-size: 11px;
+            line-height: 18px;
+            margin-top: 1.5em;
+        }
+
         span{
             display: block;
             margin-top: 5px;

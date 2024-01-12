@@ -29,5 +29,11 @@
         line-height: 10px;
         margin-top: 2em;
         margin-bottom: 15em;
+
+        @include responsive(xs){
+            font-size: 8px;
+            line-height: 14px;
+            margin-bottom: 12em;
+        }
     }
 }
