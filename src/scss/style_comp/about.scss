@@ -15,7 +15,7 @@
             display: block;
 
             @include responsive(s){
-                font-size: 13px;
+                font-size: 11px;
                 line-height: 25px;
             }
         }
@@ -27,7 +27,7 @@
             display: block;
 
             @include responsive(s){
-                font-size: 13px;
+                font-size: 11px;
             }
             
             .history_title{
@@ -43,7 +43,7 @@
             @include text(10px, 100);
 
             @include responsive(s){
-                font-size: 13px;
+                font-size: 11px;
             }
 
             a{

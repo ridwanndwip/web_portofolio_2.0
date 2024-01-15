@@ -29,9 +29,8 @@
         left: 0;
         border: none;
         height: 100%;
-        width: 11%;
+        width: 2%;
         @include flex(center, center, column);
         gap: 3em;
     }
-
 }

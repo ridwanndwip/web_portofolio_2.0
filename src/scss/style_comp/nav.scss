@@ -7,25 +7,34 @@
     
     @include responsive(m){
         justify-content: space-between;
-        padding: 1.3em 2em 1.3em 2em;
-        margin-left: 12.2%;
+        padding: 1.3em 2em 1.3em 1.5em;
+        margin-left: 10%;
     }
 
     & &_freelance{
         display: none;
         margin: 1em;
         
-        li{
+        &_title{
             list-style-type: none;
+            @include text(16px, 100);
         }
 
         &_img{
-        width: 20px;
-        padding-right: 5px;
+        width: 8px;
+        height: 8px;
+        animation-name: circle;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        display: flex;
+        margin-top: 1.3px;
         }
 
         @include responsive(m){
+            letter-spacing: 1px;
             display: flex;
+            gap: 1em;
+            align-items: center;
         }
     }
 
@@ -44,7 +53,7 @@
         transition: all .5s;
         backdrop-filter: blur(8px);
         z-index: 2;
-        
+
         li{
             list-style-type: none;
             a{
@@ -71,7 +80,6 @@
                 animation-duration: 1.5s;
                 animation-iteration-count: infinite;
             }
-
         }
 
         @include responsive(m){
@@ -82,7 +90,8 @@
             transition: none;
             width: auto;
             height: auto;
-            gap: 2em;
+            gap: 3em;
+            @include text(16px, 100);
         }
     }
 
@@ -120,7 +129,6 @@
             &:nth-child(3){
                 width: 20px;
             }
-
         }
 
         @include responsive(m){

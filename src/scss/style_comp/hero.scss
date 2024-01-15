@@ -2,8 +2,9 @@
     padding: 2em 20% 1.8em 20%;
     @include text(25px, 100);
 
-    @include responsive(s){
-        font-size: 30px;
+    @include responsive(m){
+        padding: 2em 5em 2em 1.5em;
+        margin-left: 10%;
     }
 
     & &_section{
@@ -13,6 +14,12 @@
 
         @include responsive(s){
             line-height: 40px;
+            font-size: 30px;
+        }
+
+        @include responsive(m){
+            line-height: 45px;
+            font-size: 35px;
         }
     }
 

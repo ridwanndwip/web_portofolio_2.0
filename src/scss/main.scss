@@ -33,6 +33,10 @@ body {
     position: fixed;
     left: 12%;
     z-index: -2;
+
+    @include responsive(m){
+        left: 10%;
+    }
 }
 
 .vr_2{
@@ -48,10 +52,16 @@ body {
 }
 
 .hr_1{
-    width: 70%;
+    margin-left: 12%;
+    width: 60%;
     height: 2px;
     background-color: $colorLine;
     margin-top: 1.5em;
+
+    @include responsive(m){
+        margin-left: 10%;
+        width: 75%;
+    }
 }
 
 .hr_2{
@@ -86,7 +96,7 @@ body {
 // Caption Point
 
 .scroll_caption{
-    margin-left: 78%;
+    margin-left: 77%;
 
     .yellow_text{
         @include yellow_text();
@@ -112,6 +122,10 @@ body {
             width: 10px;
             height: 2px;
         }
+    }
+
+    @include responsive(m){
+        margin-left: 92%
     }
 }
 

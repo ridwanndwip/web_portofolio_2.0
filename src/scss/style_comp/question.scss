@@ -8,6 +8,12 @@
         text-align: center;
         line-height: 18px;
         display: block;
+        width: 90%;
+
+        @include responsive(s){
+            font-size: 11px;
+            width: 80%
+        }
     }
 
     & &_button{
@@ -17,6 +23,10 @@
         color: $colorWhite;
         border: 2px solid  $colorLine;
         padding: .5em 2.5em;
+
+        @include responsive(s){
+            font-size: 11px;
+        }
     }
 
     & &_copyright{
