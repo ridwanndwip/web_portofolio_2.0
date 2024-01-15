@@ -21,13 +21,12 @@
             @include responsive(s){
                 margin-bottom: -4em;
                 width: 70%;                
-                margin-left: -25px;
+                margin-left: -35px;
             }
 
             & &_caption{
                 display: block;
                 @include text(13px, 500);
-
                 @include responsive(s){
                     font-size: 15px;
                 }
@@ -36,6 +35,7 @@
             & &_desc{
                 display: block;
                 @include text(10px, 100);
+
                 @include responsive(s){
                     font-size: 11px;
                 }
@@ -50,7 +50,7 @@
                     @include text(10px,100);
 
                     @include responsive(s){
-                        font-size: 12px;
+                        font-size: 13px;
                         margin-top: 5px
                     }
                 }
@@ -86,10 +86,10 @@
             display: block;
             margin-top: 1.2em;
             @include text(16px, 100);
-            
+
             @include responsive(s){
                 font-size: 18px;
-                margin-left: -5%
+                margin-left: -4%;
             }
         }
     }
@@ -109,7 +109,7 @@
             @include responsive(s){
                 margin-bottom: -4em;
                 width: 70%;                
-                margin-right: -25px;
+                margin-right: -35px;
             }
 
             & &_caption{
@@ -124,8 +124,10 @@
                 display: block;
                 @include text(10px, 100);
                 text-align: right;
+
                 @include responsive(s){
-                    font-size: 12px;
+                    font-size: 10px;
+                    line-height: 15px;
                 }
             }
 
@@ -138,7 +140,7 @@
                     @include text(10px,100);
 
                     @include responsive(s){
-                        font-size: 12px;
+                        font-size: 13px;
                         margin-top: 5px
                     }
                 }
@@ -176,7 +178,7 @@
             @include text(16px, 100);
             @include responsive(s){
                 font-size: 18px;
-                margin-left: 5%;
+                margin-right: -4.5%;
             }
         }
     }
