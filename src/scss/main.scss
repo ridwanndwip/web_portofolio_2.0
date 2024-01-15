@@ -52,8 +52,8 @@ body {
 }
 
 .hr_1{
-    margin-left: 12%;
-    width: 60%;
+    // margin-left: 12%;
+    width: 70%;
     height: 2px;
     background-color: $colorLine;
     margin-top: 1.5em;
@@ -79,6 +79,10 @@ body {
     @include responsive(s){
         width: 31%;
     }
+
+    @include responsive(m){
+        display: none;
+    }
 }
 
 .hr_3{
@@ -90,6 +94,11 @@ body {
 
     @include responsive(xs){
         width: 40%;
+    }
+
+    @include responsive(m){
+        margin-left: 10%;
+        width: 75%;
     }
 }
 
@@ -143,6 +152,11 @@ body {
         margin-top: 1.3em
     }
 
+    @include responsive(m){
+        padding-left: 7%;
+        margin-left: 10%;
+    }
+
     .yellow_text{
         @include yellow_text();
     }
@@ -150,7 +164,7 @@ body {
     &:before{
         margin-top: 2.5em;
         content:'';
-        width: 3em;
+        width: 5em;
         background-color: $colorLine;
         height: 2px;
         position: absolute;
@@ -160,6 +174,12 @@ body {
         @include responsive(xs){
             margin-top: 2.3em;
         }
+
+        @include responsive(m){
+            padding-left: 7%;
+            margin-left: 8%
+        }
+
     }
 }
 
@@ -176,6 +196,17 @@ body {
         font-size: 20px;
     }
 
+    @include responsive(m){
+        margin-left: 92%;
+        position: relative;
+    display: block;
+    @include text(11px, 100);
+    writing-mode:tb-rl;
+    text-align: center;
+    line-height: 15px;
+    z-index: -1;
+        margin-top: -5em;
+    }
 
     .yellow_text{
         @include yellow_text();
@@ -194,8 +225,13 @@ body {
         @include responsive(xs){
             margin-top: 2.3em;
         }
+
+        @include responsive(m){
+            display: none;
+        }
     }
 }
+
 
 .question_caption{
     @include text(15px, 100);

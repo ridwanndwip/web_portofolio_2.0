@@ -64,7 +64,7 @@
                 opacity: .2;
                 height: 90px;
                 @include responsive(s){
-                    width: 120%;
+                    width: 110%;
                     height: 110px;
                 }    
             }
@@ -75,7 +75,7 @@
                 margin-top: -1.6em;
                 margin-right: .5em;
                 @include responsive(s){
-                    margin-right: -1.5em;
+                    margin-right: -.4em;
                     margin-top: -2em;
                     width: 20px;
                 }
@@ -154,7 +154,7 @@
                 opacity: .2;
                 height: 90px;
                 @include responsive(s){
-                    width: 120%;
+                    width: 110%;
                     height: 110px;
                 }     
             }
@@ -165,7 +165,7 @@
                 margin-top: -1.6em;
                 margin-left: .5em;
                 @include responsive(s){
-                    margin-left: -1.5em;
+                    margin-left: -.4em;
                     margin-top: -2em;
                     width: 20px;
                 }
