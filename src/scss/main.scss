@@ -31,7 +31,7 @@ body {
     height: 100%;
     border-left: 2px solid $colorLine;
     position: fixed;
-    left: 12%;
+    left: 7%;
     z-index: -2;
 
     @include responsive(m){
@@ -40,10 +40,10 @@ body {
 }
 
 .vr_2{
-    height: 200em;
+    height: 100%;
     border-right: 2px solid $colorLine;
     position: fixed;
-    right: 12%;
+    right: 7%;
     z-index: -2;
     
     @include responsive(m){
@@ -52,12 +52,10 @@ body {
 }
 
 .hr_1{
-    // margin-left: 12%;
-    width: 70%;
+    width: 80%;
     height: 2px;
     background-color: $colorLine;
-    margin-top: 1.5em;
-
+    
     @include responsive(m){
         margin-left: 10%;
         width: 75%;
@@ -142,6 +140,7 @@ body {
     @include text(15px, 100);
     margin: 2em 0 0 20%;
     position: relative;
+    
     @include responsive(xs){
         font-size: 17px;
         margin-top: 1.7em
@@ -197,19 +196,24 @@ body {
     }
 
     @include responsive(m){
-        margin-left: 92%;
-        position: relative;
+    margin-left: 92%;
+    position: relative;
     display: block;
     @include text(11px, 100);
     writing-mode:tb-rl;
     text-align: center;
-    line-height: 15px;
+    line-height: 18px;
     z-index: -1;
-        margin-top: -5em;
+    margin-top: -3em;
+    right: 0;
     }
 
     .yellow_text{
         @include yellow_text();
+
+        @include responsive(m){
+            display: block;
+            }
     }
 
     &:before{
@@ -246,8 +250,24 @@ body {
         font-size: 20px;
     }
 
+    @include responsive(m){
+        margin-left: 92%;
+        position: relative;
+        display: block;
+        @include text(11px, 100);
+        writing-mode:tb-rl;
+        text-align: center;
+        line-height: 18px;
+        z-index: -1;
+        margin-top: -3em;
+        right: 0;
+    }
+
     .yellow_text{
         @include yellow_text();
+        @include responsive(m){
+            display: block;
+        }
     }
 
     &:before{
@@ -259,6 +279,9 @@ body {
         z-index: -1;
         left: 0;
         margin-top: .6em;
+        @include responsive(m){
+            display: none;
+        }
     }
 
     &:after{
@@ -270,5 +293,8 @@ body {
         z-index: -1;
         right: 0;
         margin-top: .6em;
+        @include responsive(m){
+            display: none;
+        }
     }
 }

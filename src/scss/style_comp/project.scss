@@ -1,11 +1,17 @@
 .project{
     margin-top: 4em;
     padding: 0 20% 0 20%;
-    @include flex(center,center,column);
+    @include flex(flex-start,center,column);
     gap: 2em;
 
     @include responsive(xs){
         padding: 0 22% 0 22%; 
+    }
+
+    @include responsive(m){
+        padding: 0 5em 0 7%;
+        margin-left: 10%;
+        // align-items: center;
     }
 
     &_card_left{
@@ -79,6 +85,10 @@
                     margin-top: -2em;
                     width: 20px;
                 }
+            }
+            
+            @include responsive(m){
+                align-items: flex-start;
             }
         }
 

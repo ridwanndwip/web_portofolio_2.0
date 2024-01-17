@@ -1,6 +1,6 @@
 .hero{
-    padding: 2em 20% 1.8em 20%;
-    @include text(25px, 100);
+    margin: 2em 20% 2.5em 20%;
+    // background-color: aquamarine;
 
     @include responsive(m){
         padding: 2em 2em 2em 7%;
@@ -8,8 +8,8 @@
     }
 
     & &_section{
-        line-height: 35px;
-        margin-bottom: -.5em;
+        @include text(25px, 100);
+        line-height: 40px;
         display: block;
 
         @include responsive(s){
@@ -36,8 +36,8 @@
 
     & &_profile{
         @include text(10px, 100);
-        line-height: 13px;
-        margin-top: 1.2em;
+        line-height: 15px;
+        margin-top: 1.8em;
         display: block;
 
         @include responsive(s){
