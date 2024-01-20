@@ -8,9 +8,14 @@
     }
 
     & &_section{
-        @include text(25px, 100);
-        line-height: 40px;
+        @include text(20px, 500);
+        line-height: 30px;
         display: block;
+
+        @include responsive(xs){
+            line-height: 35px;
+            font-size: 25px;
+        }
 
         @include responsive(s){
             line-height: 40px;
@@ -25,9 +30,13 @@
 
     & &_line{
         height: 2px;
-        width: 50%;
+        width: 30%;
         background-color: $colorLine;
         margin-top: 1em;
+
+        @include responsive(xs){
+        margin-top: 1.3;
+        }
 
         @include responsive(s){
             margin-top: 1.3em
@@ -36,19 +45,24 @@
 
     & &_profile{
         @include text(10px, 100);
-        line-height: 15px;
-        margin-top: 1.8em;
+        line-height: 13px;
+        margin-top: 1.5em;
         display: block;
 
+        @include responsive(xs){
+        line-height: 17px;
+        font-size: 11px;
+        }
+
         @include responsive(s){
-            font-size: 11px;
-            line-height: 18px;
-            margin-top: 1.5em;
+        font-size: 11px;
+        line-height: 18px;
+        margin-top: 1.5em;
         }
 
         span{
-            display: block;
-            margin-top: 5px;
+        display: block;
+        margin-top: 5px;
         }
     }
 
