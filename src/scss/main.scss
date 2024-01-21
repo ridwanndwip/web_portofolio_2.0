@@ -17,7 +17,7 @@ body, html {
 body {
     background-color: $colorBgBody;
     font-family: 'montserrat', sans-serif;
-    color: $colorWhite;
+    color: $colorBgBody;
 }
 
 * {
@@ -29,53 +29,61 @@ body {
 
 .vr_1{
     height: 100%;
-    border-left: 2px solid $colorLine;
+    border-left: 1px solid $colorText;
     position: fixed;
-    left: 7%;
+    left: 13%;
     z-index: -2;
 
+    @include responsive(s){
+        left: 8%;
+    }
+
     @include responsive(m){
-        left: 10%;
+        left: 13%;
     }
 }
 
 .vr_2{
     height: 100%;
-    border-right: 2px solid $colorLine;
+    border-right: 1px solid $colorText;
     position: fixed;
-    right: 7%;
+    right: 13%;
     z-index: -2;
-    
+
+    @include responsive(s){
+        right: 8%;
+    }
+
     @include responsive(m){
         display: none;
     }
 }
 
 .hr_1{
-    width: 80%;
-    height: 2px;
-    background-color: $colorLine;
+    width: 70%;
+    height: 1px;
+    background-color: $colorText;
     
+    @include responsive(s){
+        width: 78%;
+    }
+
     @include responsive(m){
-        margin-left: 10%;
+        margin-left: 13%;
         width: 75%;
     }
 }
 
 .hr_2{
-    width: 25%;
-    height: 2px;
-    background-color: $colorLine;
-    margin-top: 2.5em;
+    width: 13%;
+    height: 1px;
+    background-color: $colorText;
+    margin-top: 4em;
     position: absolute;
     right: 0;
 
-    @include responsive(xs){
-        width: 30%;
-    }
-
     @include responsive(s){
-        width: 31%;
+        width: 8%;
     }
 
     @include responsive(m){
@@ -86,7 +94,7 @@ body {
 .hr_3{
     width: 35%;
     height: 2px;
-    background-color: $colorLine;
+    background-color: $colorText;
     position: relative;
     right: 0;
 
@@ -103,10 +111,15 @@ body {
 // Caption Point
 
 .scroll_caption{
-    margin-left: 77%;
+    margin-left: 76%;
+    color: $colorText;
 
-    .yellow_text{
-        @include yellow_text();
+    @include responsive(s){
+        margin-left: 84%;
+    }
+
+    .green_text{
+        @include green_text();
     }
 
     & &_title{
@@ -114,14 +127,14 @@ body {
         margin-top: -5.5em;
         position: relative;
         display: block;
-        @include text(10px, 100);
+        @include text(8px, 300);
         writing-mode:tb-rl;
         text-align: center;
-        line-height: 15px;
+        line-height: 12px;
 
         @include responsive(s){
-            font-size: 11px;
-            line-height: 18px;
+            font-size: 9px;
+            line-height: 15px;
         }
 
         &:before{
@@ -137,45 +150,42 @@ body {
 }
 
 .about_caption{
-    @include text(15px, 100);
-    margin: 2em 0 0 20%;
+    @include text(15px, 500);
+    margin: .5em 0 0 20%;
     position: relative;
+    color: $colorText;
     
     @include responsive(xs){
-        font-size: 17px;
-        margin-top: 1.7em
+        // font-size: 17px;
+        margin-top: .5em;
     }
 
     @include responsive(s){
         font-size: 20px;
-        margin-top: 1.3em
+        // margin-top: 1.3em;
+        margin-left: 15%;
     }
 
     @include responsive(m){
         padding-left: 7%;
-        margin-left: 10%;
+        margin-left: 13%;
     }
 
-    .yellow_text{
-        @include yellow_text();
+    .green_text{
+        @include green_text($colorGreen, 300);
     }
 
     &:before{
-        margin-top: 2.5em;
+        margin-top: 2em;
         content:'';
-        width: 5em;
-        background-color: $colorLine;
-        height: 2px;
+        width: 2em;
+        background-color: $colorText;
+        height: 1px;
         position: absolute;
         left: 0;
         z-index: -1;
 
-        @include responsive(xs){
-            margin-top: 2.3em;
-        }
-
         @include responsive(m){
-            padding-left: 7%;
             margin-left: 8%
         }
 
@@ -209,7 +219,7 @@ body {
     }
 
     .yellow_text{
-        @include yellow_text();
+        @include green_text();
 
         @include responsive(m){
             display: block;
@@ -220,7 +230,7 @@ body {
         margin-top: 2.5em;
         content:'';
         width: 3em;
-        background-color: $colorLine;
+        background-color: $colorText;
         height: 2px;
         position: absolute;
         right: 0;
@@ -264,7 +274,7 @@ body {
     }
 
     .yellow_text{
-        @include yellow_text();
+        @include green_text();
         @include responsive(m){
             display: block;
         }
@@ -273,7 +283,7 @@ body {
     &:before{
         content:'';
         width: 30%;
-        background-color: $colorLine;
+        background-color: $colorText;
         height: 2px;
         position: absolute;
         z-index: -1;
@@ -287,7 +297,7 @@ body {
     &:after{
         content:'';
         width: 30%;
-        background-color: $colorLine;
+        background-color: $colorText;
         height: 2px;
         position: absolute;
         z-index: -1;

@@ -1,61 +1,66 @@
 .about{
-    padding: 2.5em 20% 4em 20%;
+    padding: 1.5em 20% 4em 20%;
     z-index: 0;
 
     @include responsive(s){
-        padding-top: 3.5em;
+        margin-top: .7em;
+        padding-left: 15%;
     }
 
     @include responsive(m){
-        padding: 3em 5em 2em 7%;
-        margin-left: 10%;
+        padding: 1.7em 0 2em 0;
+        margin-left: 20%;
     }
 
     & &_profile{
 
         &_desc{
-            color: $colorWhite;
-            @include text(10px, 100);
+            color: $colorText;
+            @include text(12px, 300);
             line-height: 20px;
             display: block;
 
             @include responsive(s){
-                font-size: 11px;
+                font-size: 13px;
                 line-height: 25px;
+            }
+
+            @include responsive(m){
+                width: 70%;
             }
         }
 
         &_history{
             margin-top: 1.5em;
-            color: $colorWhite;
-            @include text(10px, 100);
+            color: $colorText;
+            @include text(12px, 300);
             display: block;
 
             @include responsive(s){
-                font-size: 11px;
+                font-size: 13px;
             }
             
             .history_title{
                 display: block;
                 font-weight: 400;
-                color: $colorYellow;
+                color: $colorGreen;
                 margin-bottom: 1em;
             }
         }
 
         &_button{
             margin-top: 3em;
-            @include text(10px, 100);
+            @include text(12px, 300);
 
             @include responsive(s){
-                font-size: 11px;
+                font-size: 13px;
             }
 
             a{
                 text-decoration: none;
                 padding: .8em 2.2em;
-                border: 1px solid $colorLine;
-                color: $colorWhite;
+                border: 1px solid $colorText;
+                color: $colorText;
                 @include responsive(s){
                     padding: 1em 2.5em;
                 }
@@ -67,12 +72,25 @@
         width: 170px;
         display: block;
         opacity: .2;
-        margin-left: 3em;
-        margin-top: -6em;
+        margin-left: 2.5em;
+        margin-top: -7em;
+
+        @include responsive(xs){
+            margin-left: 6em;
+            margin-top: -6.5em;
+            width: 180px;
+        }
 
         @include responsive(s){
-            width: 210px;
-            margin-left: 7em;
+            width: 230px;
+            margin-left: 9em;
+            margin-top: -9em;
+        }
+
+        @include responsive(m){
+            width: 200px;
+            margin-left: 16em;
+            margin-top: -8em;
         }
     }
 

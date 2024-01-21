@@ -1,9 +1,7 @@
 // color function
-$colorBgBody:#222831;
-$colorLine:#ffffff26; 
-$colorYellow:#FFD369;
-$colorWhite:#ffffff;
-$colorBgNavbar:#2228314d;
+$colorBgBody:#E8E8E8;
+$colorText:#222831; 
+$colorGreen:#00ADB5;
 
 // mixin
 @mixin text($size,$weight){
@@ -18,7 +16,7 @@ $colorBgNavbar:#2228314d;
     flex-direction: $direction;
 } // @include flex(center,center,center)
 
-@mixin yellow_text($color : $colorYellow, $weight : 400){
+@mixin green_text($color : $colorGreen, $weight : 500){
     color: $color;
     font-weight: $weight;
 }
