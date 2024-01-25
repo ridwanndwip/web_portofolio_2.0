@@ -1,6 +1,5 @@
 .project{
-    margin-top: 4em;
-    padding: 0 20% 0 20%;
+    padding: 7em 20% 0 20%;
     @include flex(flex-start,center,column);
     gap: 2em;
 
@@ -14,14 +13,15 @@
     }
 
     &_card_left{
+        color: $colorText;
         @include flex(flex-start, space-evenly, column);
 
         &_title{
             @include flex(flex-start,flex-start,column);
             gap: .5em;
-            margin-bottom: -5em;
+            margin-bottom: -6em;
             width: 87%;
-            margin-left: -10px;
+            margin-left: 1em;
             line-height: 17px;
             @include responsive(s){
                 margin-bottom: -4em;
@@ -39,7 +39,7 @@
 
             & &_desc{
                 display: block;
-                @include text(10px, 100);
+                @include text(10px, 300);
 
                 @include responsive(s){
                     font-size: 11px;
@@ -47,12 +47,12 @@
             }
 
             & &_button{
-                    border: 2px solid $colorText;
+                    border: 1px solid $colorText;
                     padding: .3em 2.5em;
                     display: block;
-                    color: $colorText;
+                    color: $colorGreen;
                     text-decoration: none;
-                    @include text(10px,100);
+                    @include text(10px,300);
 
                     @include responsive(s){
                         font-size: 13px;
@@ -65,9 +65,10 @@
             @include flex(center, center, column);
 
             & &_portofolio{
+                z-index: -2;
                 width: 100%;
-                opacity: .2;
-                height: 90px;
+                opacity: .4;
+                height: 100px;
                 @include responsive(s){
                     width: 110%;
                     height: 110px;
@@ -75,10 +76,11 @@
             }
 
             & &_powerButton{
+                width: 20px;
                 align-self: flex-end;
-                opacity: .9;
-                margin-top: -1.6em;
-                margin-right: .5em;
+                opacity: 1;
+                margin-top: -2em;
+                margin-right: 1em;
                 @include responsive(s){
                     margin-right: -.4em;
                     margin-top: -2em;
@@ -94,7 +96,7 @@
         & &_date{
             display: block;
             margin-top: 1.2em;
-            @include text(16px, 100);
+            @include text(16px, 300);
 
             @include responsive(s){
                 font-size: 18px;

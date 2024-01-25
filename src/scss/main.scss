@@ -92,14 +92,14 @@ body {
 }
 
 .hr_3{
+    margin-top: 15em;
     width: 13%;
-    height: 2px;
+    height: 1px;
     background-color: $colorText;
-    position: relative;
-    right: 0;
+    position: absolute;
 
-    @include responsive(xs){
-        width: 40%;
+    @include responsive(s){
+        width: 8%;
     }
 
     @include responsive(m){
@@ -193,10 +193,11 @@ body {
 }
 
 .project_caption{
-    @include text(15px, 100);
+    @include text(15px, 500);
+    margin: .5em 0 0 0;
+    color: $colorText;
     position: absolute;
     right: 20%;
-    margin-top: -.8em;
     @include responsive(xs){
         font-size: 17px;
     }
@@ -218,30 +219,22 @@ body {
     right: 0;
     }
 
-    .yellow_text{
-        @include green_text();
-
-        @include responsive(m){
-            display: block;
-            }
+    .green_text{
+        @include green_text($colorGreen, 300);
     }
 
     &:before{
-        margin-top: 2.5em;
+        margin-top: 2em;
         content:'';
-        width: 3em;
+        width: 2em;
         background-color: $colorText;
-        height: 2px;
+        height: 1px;
         position: absolute;
-        right: 0;
+        left: 0;
         z-index: -1;
 
-        @include responsive(xs){
-            margin-top: 2.3em;
-        }
-
         @include responsive(m){
-            display: none;
+            margin-left: 8%
         }
     }
 }
