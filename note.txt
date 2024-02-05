@@ -1,0 +1,46 @@
+//  Scroll Animation
+
+let scrollDirection;
+const nav = document.querySelector('.Navbar');
+document.addEventListener(
+  'scroll',
+  (e) => {
+    const st = window.pageYOffset || document.documentElement.scrollTop;
+    const direction = st > e.target.lastScrollTop ? 'down' : 'up';
+    if (Math.abs(st - e.target.lastScrollTop) > 20)
+      document.body.setAttribute('scroll-direction', direction);
+    scrollDirection = direction;
+    e.target.lastScrollTop = st <= 0 ? 0 : st;
+  },
+  {
+    passive: true,
+  }
+);
+
+function addRevealEffect(elements) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      let revealClass;
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          revealClass = scrollDirection === 'up' ? 'reveal-up' : 'reveal-down';
+
+          entry.target.classList.add(revealClass);
+        } else {
+          entry.target.className = 'subject';
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  elements.forEach((element) => {
+    observer.observe(element);
+  });
+}
+
+const elementsToReveal = document.querySelectorAll('.subject');
+addRevealEffect(elementsToReveal);
+
+ideas link
+https://freefrontend.com/css-text-glitch-effects/#google_vignette

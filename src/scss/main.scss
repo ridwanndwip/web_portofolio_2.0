@@ -9,45 +9,15 @@
 @import'style_comp/project';
 @import'style_comp/question';
 
-body{
-    background: linear-gradient(316deg, #5EAAA8,#A3D2CA);
-    background-size: 500% 500%;
-    -webkit-animation: AnimationName 41s ease infinite;
-    -moz-animation: AnimationName 41s ease infinite;
-    -o-animation: AnimationName 41s ease infinite;
-    animation: AnimationName 41s ease infinite;
-    }
-    @-webkit-keyframes AnimationName {
-        0%{background-position:9% 0%}
-        50%{background-position:92% 100%}
-        100%{background-position:9% 0%}
-    }
-    @-moz-keyframes AnimationName {
-        0%{background-position:9% 0%}
-        50%{background-position:92% 100%}
-        100%{background-position:9% 0%}
-    }
-    @-o-keyframes AnimationName {
-        0%{background-position:9% 0%}
-        50%{background-position:92% 100%}
-        100%{background-position:9% 0%}
-    }
-    @keyframes AnimationName {
-        0%{background-position:9% 0%}
-        50%{background-position:92% 100%}
-        100%{background-position:9% 0%}
-    }
-
-
 body, html {
     height: 100%;
     margin: 0;
 }
 
 body {
-    // background-color: $colorBgBody;
+    background-color: #000000;
     font-family: 'montserrat', sans-serif;
-    color: $colorBgBody;
+    color: #ffffff;
 }
 
 * {
@@ -59,9 +29,9 @@ body {
 
 .vr_1{
     height: 100%;
-    border-left: 1px solid $colorText;
+    border-left: 1px solid #14FFEC ;
     position: fixed;
-    left: 13%;
+    left: 25%;
     z-index: -2;
 
     @include responsive(s){
@@ -75,9 +45,9 @@ body {
 
 .vr_2{
     height: 100%;
-    border-right: 1px solid $colorText;
+    border-right: 1px solid #0D7377;
     position: fixed;
-    right: 13%;
+    left: 24%;
     z-index: -2;
 
     @include responsive(s){
@@ -89,245 +59,246 @@ body {
     }
 }
 
-.hr_1{
-    width: 70%;
-    height: 1px;
-    background-color: $colorText;
+
+// .hr_1{
+//     width: 70%;
+//     height: 1px;
+//     background-color: $colorText;
     
-    @include responsive(s){
-        width: 78%;
-    }
+//     @include responsive(s){
+//         width: 78%;
+//     }
 
-    @include responsive(m){
-        margin-left: 13%;
-        width: 75%;
-    }
-}
+//     @include responsive(m){
+//         margin-left: 13%;
+//         width: 75%;
+//     }
+// }
 
-.hr_2{
-    width: 13%;
-    height: 1px;
-    background-color: $colorText;
-    margin-top: 4em;
-    position: absolute;
-    right: 0;
+// .hr_2{
+//     width: 13%;
+//     height: 1px;
+//     background-color: $colorText;
+//     margin-top: 4em;
+//     position: absolute;
+//     right: 0;
 
-    @include responsive(s){
-        width: 8%;
-    }
+//     @include responsive(s){
+//         width: 8%;
+//     }
 
-    @include responsive(m){
-        display: none;
-    }
-}
+//     @include responsive(m){
+//         display: none;
+//     }
+// }
 
-.hr_3{
-    margin-top: 15em;
-    width: 13%;
-    height: 1px;
-    background-color: $colorText;
-    position: absolute;
+// .hr_3{
+//     margin-top: 15em;
+//     width: 13%;
+//     height: 1px;
+//     background-color: $colorText;
+//     position: absolute;
 
-    @include responsive(s){
-        width: 8%;
-    }
+//     @include responsive(s){
+//         width: 8%;
+//     }
 
-    @include responsive(m){
-        margin-left: 10%;
-        width: 75%;
-    }
-}
+//     @include responsive(m){
+//         margin-left: 10%;
+//         width: 75%;
+//     }
+// }
 
 // Caption Point
 
-.scroll_caption{
-    margin-left: 76%;
-    color: $colorText;
+// .scroll_caption{
+//     margin-left: 76%;
+//     color: $colorText;
 
-    @include responsive(s){
-        margin-left: 84%;
-    }
+//     @include responsive(s){
+//         margin-left: 84%;
+//     }
 
-    .green_text{
-        @include green_text();
-    }
+//     .green_text{
+//         @include green_text();
+//     }
 
-    & &_title{
-        z-index: -1;
-        margin-top: -5.5em;
-        position: relative;
-        display: block;
-        @include text(8px, 300);
-        writing-mode:tb-rl;
-        text-align: center;
-        line-height: 12px;
+//     & &_title{
+//         z-index: -1;
+//         margin-top: -5.5em;
+//         position: relative;
+//         display: block;
+//         @include text(8px, 300);
+//         writing-mode:tb-rl;
+//         text-align: center;
+//         line-height: 12px;
 
-        @include responsive(s){
-            font-size: 9px;
-            line-height: 15px;
-        }
+//         @include responsive(s){
+//             font-size: 9px;
+//             line-height: 15px;
+//         }
 
-        &:before{
-            content: '';
-            width: 10px;
-            height: 2px;
-        }
-    }
+//         &:before{
+//             content: '';
+//             width: 10px;
+//             height: 2px;
+//         }
+//     }
 
-    @include responsive(m){
-        margin-left: 92%
-    }
-}
+//     @include responsive(m){
+//         margin-left: 92%
+//     }
+// }
 
-.about_caption{
-    @include text(15px, 500);
-    margin: .5em 0 0 20%;
-    position: relative;
-    color: $colorText;
+// .about_caption{
+//     @include text(15px, 500);
+//     margin: .5em 0 0 20%;
+//     position: relative;
+//     color: $colorText;
     
-    @include responsive(xs){
-        // font-size: 17px;
-        margin-top: .5em;
-    }
+//     @include responsive(xs){
+//         // font-size: 17px;
+//         margin-top: .5em;
+//     }
 
-    @include responsive(s){
-        font-size: 20px;
-        // margin-top: 1.3em;
-        margin-left: 15%;
-    }
+//     @include responsive(s){
+//         font-size: 20px;
+//         // margin-top: 1.3em;
+//         margin-left: 15%;
+//     }
 
-    @include responsive(m){
-        padding-left: 7%;
-        margin-left: 13%;
-    }
+//     @include responsive(m){
+//         padding-left: 7%;
+//         margin-left: 13%;
+//     }
 
-    .green_text{
-        @include green_text($colorGreen, 300);
-    }
+//     .green_text{
+//         @include green_text($colorGreen, 300);
+//     }
 
-    &:before{
-        margin-top: 2em;
-        content:'';
-        width: 2em;
-        background-color: $colorText;
-        height: 1px;
-        position: absolute;
-        left: 0;
-        z-index: -1;
+//     &:before{
+//         margin-top: 2em;
+//         content:'';
+//         width: 2em;
+//         background-color: $colorText;
+//         height: 1px;
+//         position: absolute;
+//         left: 0;
+//         z-index: -1;
 
-        @include responsive(m){
-            margin-left: 8%
-        }
+//         @include responsive(m){
+//             margin-left: 8%
+//         }
 
-    }
-}
+//     }
+// }
 
-.project_caption{
-    @include text(15px, 500);
-    margin: .5em 0 0 0;
-    color: $colorText;
-    position: absolute;
-    right: 20%;
-    @include responsive(xs){
-        font-size: 17px;
-    }
+// .project_caption{
+//     @include text(15px, 500);
+//     margin: .5em 0 0 0;
+//     color: $colorText;
+//     position: absolute;
+//     right: 20%;
+//     @include responsive(xs){
+//         font-size: 17px;
+//     }
 
-    @include responsive(s){
-        font-size: 20px;
-    }
+//     @include responsive(s){
+//         font-size: 20px;
+//     }
 
-    @include responsive(m){
-    margin-left: 92%;
-    position: relative;
-    display: block;
-    @include text(11px, 100);
-    writing-mode:tb-rl;
-    text-align: center;
-    line-height: 18px;
-    z-index: -1;
-    margin-top: -3em;
-    right: 0;
-    }
+//     @include responsive(m){
+//     margin-left: 92%;
+//     position: relative;
+//     display: block;
+//     @include text(11px, 100);
+//     writing-mode:tb-rl;
+//     text-align: center;
+//     line-height: 18px;
+//     z-index: -1;
+//     margin-top: -3em;
+//     right: 0;
+//     }
 
-    .green_text{
-        @include green_text($colorGreen, 300);
-    }
+//     .green_text{
+//         @include green_text($colorGreen, 300);
+//     }
 
-    &:before{
-        margin-top: 2em;
-        content:'';
-        width: 2em;
-        background-color: $colorText;
-        height: 1px;
-        position: absolute;
-        left: 0;
-        z-index: -1;
+//     &:before{
+//         margin-top: 2em;
+//         content:'';
+//         width: 2em;
+//         background-color: $colorText;
+//         height: 1px;
+//         position: absolute;
+//         left: 0;
+//         z-index: -1;
 
-        @include responsive(m){
-            margin-left: 8%
-        }
-    }
-}
+//         @include responsive(m){
+//             margin-left: 8%
+//         }
+//     }
+// }
 
 
-.question_caption{
-    @include text(15px, 100);
-    margin-top: 3.5em;
-    text-align: center;
+// .question_caption{
+//     @include text(15px, 100);
+//     margin-top: 3.5em;
+//     text-align: center;
 
-    @include responsive(xs){
-        font-size: 17px;
-    }
+//     @include responsive(xs){
+//         font-size: 17px;
+//     }
 
-    @include responsive(s){
-        font-size: 20px;
-    }
+//     @include responsive(s){
+//         font-size: 20px;
+//     }
 
-    @include responsive(m){
-        margin-left: 92%;
-        position: relative;
-        display: block;
-        @include text(11px, 100);
-        writing-mode:tb-rl;
-        text-align: center;
-        line-height: 18px;
-        z-index: -1;
-        margin-top: -3em;
-        right: 0;
-    }
+//     @include responsive(m){
+//         margin-left: 92%;
+//         position: relative;
+//         display: block;
+//         @include text(11px, 100);
+//         writing-mode:tb-rl;
+//         text-align: center;
+//         line-height: 18px;
+//         z-index: -1;
+//         margin-top: -3em;
+//         right: 0;
+//     }
 
-    .yellow_text{
-        @include green_text();
-        @include responsive(m){
-            display: block;
-        }
-    }
+//     .yellow_text{
+//         @include green_text();
+//         @include responsive(m){
+//             display: block;
+//         }
+//     }
 
-    &:before{
-        content:'';
-        width: 30%;
-        background-color: $colorText;
-        height: 2px;
-        position: absolute;
-        z-index: -1;
-        left: 0;
-        margin-top: .6em;
-        @include responsive(m){
-            display: none;
-        }
-    }
+//     &:before{
+//         content:'';
+//         width: 30%;
+//         background-color: $colorText;
+//         height: 2px;
+//         position: absolute;
+//         z-index: -1;
+//         left: 0;
+//         margin-top: .6em;
+//         @include responsive(m){
+//             display: none;
+//         }
+//     }
 
-    &:after{
-        content:'';
-        width: 30%;
-        background-color: $colorText;
-        height: 2px;
-        position: absolute;
-        z-index: -1;
-        right: 0;
-        margin-top: .6em;
-        @include responsive(m){
-            display: none;
-        }
-    }
-}
+//     &:after{
+//         content:'';
+//         width: 30%;
+//         background-color: $colorText;
+//         height: 2px;
+//         position: absolute;
+//         z-index: -1;
+//         right: 0;
+//         margin-top: .6em;
+//         @include responsive(m){
+//             display: none;
+//         }
+//     }
+// }
