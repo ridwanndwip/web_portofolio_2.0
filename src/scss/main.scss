@@ -9,10 +9,10 @@
 @import'style_comp/project';
 @import'style_comp/question';
 
-body, html {
-    height: 100%;
-    margin: 0;
-}
+// body, html {
+//     height: 100%;
+//     margin: 0;
+// }
 
 body {
     background-color: #000000;
@@ -31,7 +31,7 @@ body {
     height: 100%;
     border-left: 1px solid #14FFEC ;
     position: fixed;
-    left: 25%;
+    left: 31%;
     z-index: -2;
 
     @include responsive(s){
@@ -47,7 +47,7 @@ body {
     height: 100%;
     border-right: 1px solid #0D7377;
     position: fixed;
-    left: 24%;
+    left: 30%;
     z-index: -2;
 
     @include responsive(s){

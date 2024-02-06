@@ -1,12 +1,8 @@
 .navbar{
     @include flex(center,space-between,row);
-    padding: 1.5em;
-
-    @include responsive(m){
-        justify-content: space-between;
-        padding: 2em 7% 2em 7%;
-        margin-left: 13%;
-    }
+    // padding: 1.5em;
+    padding: 1em 2em;
+    background-color: aqua;
 
     span{
         @include text(20px, 600);
