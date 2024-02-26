@@ -44,3 +44,18 @@ addRevealEffect(elementsToReveal);
 
 ideas link
 https://freefrontend.com/css-text-glitch-effects/#google_vignette
+
+// Penjelasan AOS.
+https://michalsnik.github.io/aos/
+
+  <div
+    data-aos="fade-up" = Jenis Transisi
+    data-aos-offset="200" = Menentukan jumlah on/off dari scroll
+    data-aos-delay="50" = Menentukan waktu delay saat on
+    data-aos-duration="1000" = Durasi animasi saat on
+    data-aos-easing="ease-in-out" = Menetukan waktu animasi 
+    data-aos-mirror="true" = 
+    data-aos-once="false"
+    data-aos-anchor-placement="top-center"
+  >
+  </div>

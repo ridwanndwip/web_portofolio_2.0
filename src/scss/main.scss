@@ -3,21 +3,18 @@
 
 // Component
 @import'style_comp/nav';
+@import'style_comp/scroll';
 @import'style_comp/bottom_bar';
 @import'style_comp/hero';
 @import'style_comp/about';
 @import'style_comp/project';
 @import'style_comp/question';
 
-// body, html {
-//     height: 100%;
-//     margin: 0;
-// }
-
 body {
     background-color: #000000;
     font-family: 'montserrat', sans-serif;
     color: #ffffff;
+    min-height: 800vh;
 }
 
 * {
@@ -27,37 +24,36 @@ body {
 
 // VR & HR Line
 
-.vr_1{
-    height: 100%;
-    border-left: 1px solid #14FFEC ;
-    position: fixed;
-    left: 31%;
-    z-index: -2;
+// .vr_1{
+//     height: 100%;
+//     border-left: 1px solid #14FFEC ;
+//     position: fixed;
+//     left: 31%;
+//     z-index: -2;
 
-    @include responsive(s){
-        left: 8%;
-    }
+//     @include responsive(s){
+//         left: 8%;
+//     }
 
-    @include responsive(m){
-        left: 13%;
-    }
-}
+//     @include responsive(m){
+//         left: 13%;
+//     }
+// }
 
-.vr_2{
-    height: 100%;
-    border-right: 1px solid #0D7377;
-    position: fixed;
-    left: 30%;
-    z-index: -2;
+// .vr_2{
+//     height: 100%;
+//     position: fixed;
+//     left: 30%;
+//     z-index: -2;
 
-    @include responsive(s){
-        right: 8%;
-    }
+//     @include responsive(s){
+//         right: 8%;
+//     }
 
-    @include responsive(m){
-        display: none;
-    }
-}
+//     @include responsive(m){
+//         display: none;
+//     }
+// }
 
 
 // .hr_1{
@@ -302,3 +298,5 @@ body {
 //         }
 //     }
 // }
+
+// MOUSE SCROLL

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroll Navbar Visibility</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    transition: top 0.3s;
+  }
+  .content {
+    height: 2000px; /* just for demonstration */
+    padding-top: 50px; /* to avoid content hidden behind the navbar */
+  }
+</style>
+</head>
+<body>
+
+<div class="navbar" id="navbar">
+  <div class="container">
+    <h1>My Website</h1>
+  </div>
+</div>
+
+<div class="content">
+  <!-- Your content here -->
+</div>
+
+<script>
+  let prevScrollPos = window.pageYOffset;
+  const navbar = document.getElementById('navbar');
+
+  window.onscroll = function() {
+    const currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos > currentScrollPos) {
+      navbar.style.top = '0';
+    } else {
+      navbar.style.top = `-${navbar.offsetHeight}px`;
+    }
+
+    prevScrollPos = currentScrollPos;
+  }
+</script>
+
+</body>
+</html>

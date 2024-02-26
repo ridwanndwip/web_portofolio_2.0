@@ -1,34 +1,34 @@
+#navbar.scroll-down {
+    height: 0;
+  }
+
 .navbar{
     @include flex(center,space-between,row);
-    // padding: 1.5em;
-    padding: 1em 2em;
-    background-color: aqua;
-
-    span{
-        @include text(20px, 600);
-    }
+    padding: 8% 3em;
+    @include text(10px, 400);
+    height: 0px;
+    position: sticky;
+    z-index: 2;
 
     & &_freelance{
         display: flex;
         align-items: center;
-        gap: .5em;
+        gap: .8em;
         
         &_title{
             list-style-type: none;
-            @include text(9px, 200);
+            @include text(10px, 400);
             color: $colorText;
-            letter-spacing: 1px;
+            letter-spacing: .5px;
         }
 
         &_img{
-        width: 8px;
-        height: 8px;
+        width: 6px;
+        height: 6px;
         animation-name: circle;
         animation-duration: 1.5s;
         animation-iteration-count: infinite;
         display: flex;
-        margin-top: 1.3px;
-        margin-right: -.2em;
         }
 
         @include responsive(m){
@@ -105,6 +105,9 @@
         @include flex(flex-end,none,column);
         position: relative;
         z-index: 2;
+        
+        // font-size: 6px;
+        // font-weight: 100;
 
         input{
             position: absolute;

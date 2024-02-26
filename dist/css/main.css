@@ -1,36 +1,38 @@
+#navbar.scroll-down {
+  height: 0;
+}
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding: 1em 2em;
-  background-color: aqua;
-}
-.navbar span {
-  font-size: 20px;
-  font-weight: 600;
+  padding: 8% 3em;
+  font-size: 10px;
+  font-weight: 400;
+  height: 0px;
+  position: sticky;
+  z-index: 2;
 }
 .navbar .navbar_freelance {
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 0.8em;
 }
 .navbar .navbar_freelance_title {
   list-style-type: none;
-  font-size: 9px;
-  font-weight: 200;
+  font-size: 10px;
+  font-weight: 400;
   color: #ffffff;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 .navbar .navbar_freelance_img {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   animation-name: circle;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   display: flex;
-  margin-top: 1.3px;
-  margin-right: -0.2em;
 }
 @media (min-width: 768px) {
   .navbar .navbar_freelance {
@@ -201,6 +203,90 @@
     opacity: 1;
   }
 }
+.mouse_scroll {
+  display: block;
+}
+
+.m_scroll_arrows {
+  display: block;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  margin: 0 0 5px 0;
+  width: 5px;
+  height: 5px;
+}
+
+.doi, .trei {
+  -webkit-animation: mouse-scroll 1s infinite;
+  -moz-animation: mouse-scroll 1s infinite;
+  animation: mouse-scroll 1s infinite;
+}
+
+.doi {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -webkit-animation-direction: alternate;
+  animation-delay: 0.2s;
+  animation-direction: alternate;
+  margin-top: 1px;
+}
+
+.trei {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -webkit-animation-direction: alternate;
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+  margin-top: -6px;
+}
+
+@-webkit-keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .BarBottom {
   display: flex;
   align-items: center;
@@ -241,18 +327,41 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  margin: 1em 2em;
-  background-color: aqua;
-  font-size: 6px;
+  margin: 20% 3em 0 3em;
+  font-size: 10px;
   font-weight: 200;
 }
 .hero .hero_email {
-  background-color: red;
+  letter-spacing: 1px;
   display: block;
   writing-mode: vertical-rl;
+  position: fixed;
+  opacity: 0;
+}
+.hero .hero_mainbanner {
+  display: flex;
+  align-items: default;
+  justify-content: default;
+  flex-direction: default;
+  background-color: aqua;
+  height: 200px;
+  width: 600px;
+  overflow: hidden;
+}
+.hero .hero_mainbanner:nth-child(2) {
+  width: 150px;
+  height: 400px;
+  object-fit: cover;
+}
+.hero .hero_mainbanner {
+  display: flex;
+  align-items: default;
+  justify-content: default;
+  flex-direction: row;
+  color: #ffffff;
 }
 .hero .hero_scroll {
-  background-color: red;
+  letter-spacing: 1.5px;
   display: block;
   writing-mode: vertical-rl;
 }
@@ -595,47 +704,12 @@ body {
   background-color: #000000;
   font-family: "montserrat", sans-serif;
   color: #ffffff;
+  min-height: 800vh;
 }
 
 * {
   margin: 0;
   padding: 0;
-}
-
-.vr_1 {
-  height: 100%;
-  border-left: 1px solid #14FFEC;
-  position: fixed;
-  left: 31%;
-  z-index: -2;
-}
-@media (min-width: 576px) {
-  .vr_1 {
-    left: 8%;
-  }
-}
-@media (min-width: 768px) {
-  .vr_1 {
-    left: 13%;
-  }
-}
-
-.vr_2 {
-  height: 100%;
-  border-right: 1px solid #0D7377;
-  position: fixed;
-  left: 30%;
-  z-index: -2;
-}
-@media (min-width: 576px) {
-  .vr_2 {
-    right: 8%;
-  }
-}
-@media (min-width: 768px) {
-  .vr_2 {
-    display: none;
-  }
 }
 
 /*# sourceMappingURL=main.css.map */

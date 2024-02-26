@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 <body>
@@ -15,25 +16,20 @@
     <!-- Line Vertical -->
     <div class="vr_1"></div>
     <div class="vr_2"></div>
-
     <!-- Navbar Section -->
-    <nav class="navbar">
-        <span>R</span>
+    <nav class="navbar" id="navbar">
         <ul class="navbar_freelance">
             <img class="navbar_freelance_img" src="src/img/little_circle.png" alt="">
             <li class="navbar_freelance_title">Available For Freelance</li>
         </ul>
-        <!-- <ul class="navbar_menu">
+        <ul class="navbar_menu">
             <li class="navbar_menu_list"><a href="">About</a></li>
             <li class="navbar_menu_list"><a href="">Works</a></li>
             <li class="navbar_menu_freelance">
-                <img src="src/img/little_circle.png" alt="Little Circle" class="navbar_menu_freelance_img">
+                <img src="src/img/little_circle.png" alt="Little Circle" class="navbar_menu_freelance_img"/>
                 <span> Available for freelance</span>
             </li>
-        </ul> -->
-        <div class="navbar_toggle">
-            H
-        </div>
+        </ul>
         <!-- <div class="navbar_toggle">
             <input type="checkbox" id="stopScrollingCheckbox">
             <span> </span>
@@ -41,6 +37,9 @@
             <span> </span>
             <span> </span>
         </div> -->
+        <div>
+            r
+        </div>
     </nav>
 
     <!-- Bottom Bar -->
@@ -53,15 +52,17 @@
 
     <!-- Hero Section -->
     <div class="hero">
-        <div class="hero_email">ridwanndwip@gmail.com</div>
+        <div class="hero_email" id="hiddenDiv" >ridwanndwip@gmail.com</div>
         <div class="hero_mainbanner">
-            <!-- <img src="" alt="Hero Mainbanner Img 1"> -->
-            <!-- <img src="" alt="Hero Mainbanner Img 2"> -->
+            <img src="src/img/mainbanner1.jpg" alt="Hero Mainbanner Img 1">
+            <!-- <div class="hero_mainbanner_1"></div> -->
+            <!-- <img src="src/img/mainbanner2.jpg" alt="Hero Mainbanner Img 2"> -->
         </div>
-        <div class="hero_scroll">
-            <span>lets scroll</span>
-            <span>Arrow Scroll</span>
-        </div>
+        <div class="mouse_scroll">
+                        <span class="m_scroll_arrows doi"></span>
+                        <span class="m_scroll_arrows trei"></span>
+                    </div>
+            </div>
     </div>
 
 
@@ -151,6 +152,42 @@
         <span class="question_copyright">Design & built by <span class="yellow_text">ridwaanndwip</span> <br> Live to learn n leveling up</span>
     </div> -->
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="src/index.js"></script>
+    <script>
+        AOS.init();
+        AOS.init({
+          duration: 2000, // values from 0 to 3000, with step 50ms
+        });
+      </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.getElementById('navbar');
+      
+        window.onscroll = function() {
+          const currentScrollPos = window.pageYOffset;
+      
+          if (prevScrollPos > currentScrollPos) {
+            navbar.style.top = '0';
+          } else {
+            navbar.style.top = `-${navbar.offsetHeight}px`;
+          }
+      
+          prevScrollPos = currentScrollPos;
+        }
+      </script>
+
+      <script>
+        // window.addEventListener('scroll', function() {
+        // let div = document.getElementById('hiddenDiv');
+        //   if (window.scrollY > 300) {
+        //     div.style.opacity = '1';
+        //   } else {
+        //     div.style.opacity = '0';
+        //   }
+        // });
+      </script>
 </body>
 </html>

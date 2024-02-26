@@ -1,25 +1,39 @@
 .hero{
     @include flex(center,space-between,row);
-    margin: 1em 2em;
-    background-color: aqua;
-    @include text(6px,200);
+    margin: 20% 3em 0 3em;
+    @include text(10px, 200);
 
     & &_email{
-        background-color: red;
+        letter-spacing: 1px;
         display: block;
         writing-mode: vertical-rl;
-        // text-orientation: mixed;
+        position: fixed;
+        opacity: 0;
     }
 
-    // & &_mainbanner{
-    //     @include flex(default,default,row);
-    //     color: $colorText;
-    // }
+    & &_mainbanner{
+        @include flex(default,default,default);
+        background-color: aqua;
+        height: 200px;
+        width: 600px;
+        overflow: hidden;
+
+        &:nth-child(2){
+            width: 150px;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+    }
+
+    & &_mainbanner{
+        @include flex(default,default,row);
+        color: $colorText;
+    }
 
     & &_scroll{
-        background-color: red;
+        letter-spacing: 1.5px;
         display: block;
         writing-mode: vertical-rl;
-        // text-orientation: mixed;
     }
 }

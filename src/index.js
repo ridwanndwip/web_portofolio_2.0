@@ -20,3 +20,84 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+const content = document.querySelector(".content");
+const character = document.querySelector(".wrap");
+
+gsap
+  .timeline({
+    repeat: -1,
+    yoyo: true
+  })
+  .to(
+    character,
+    {
+      duration: 1,
+      y: -30,
+      easy: "sine.inOut"
+    },
+    0
+  );
+
+gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".page",
+      scrub: true,
+      start: "0% 0%",
+      end: "100% 100%"
+    }
+  })
+
+  .fromTo(
+    content,
+    {
+      xPercent: 0
+    },
+    {
+      xPercent: -67,
+      easy: "none"
+    },
+    0
+  )
+
+  .to(
+    character,
+    {
+      duration: 1,
+      rotation: 10,
+      x: -400,
+      easy: "sine.inOut"
+    },
+    0
+  );
+
+//  AOS Animation
+AOS.init();
+
+
+// SCROLL Navbar
+// const body = document.querySelector("#navbar");
+// let lastScroll = 0;
+
+// window.addEventListener("scroll", () => {
+//   const currentScroll = window.pageYOffset;
+
+//   if (Math.abs(currentScroll - lastScroll) < 20) {
+//     return;
+//   }
+
+//   if (currentScroll > lastScroll) {
+//     body.classList.add("scroll-down");
+//   } else {
+//     body.classList.remove("scroll-down");
+//   }
+
+//   lastScroll = currentScroll;
+// });
+
+// if (currentScroll <= 0) {
+//   body.classList.remove("scroll-up");
+//   return;
+// }
