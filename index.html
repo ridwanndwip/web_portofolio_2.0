@@ -14,10 +14,11 @@
 <body>
 
     <!-- Line Vertical -->
-    <div class="vr_1"></div>
-    <div class="vr_2"></div>
+    <!-- <div class="vr_1"></div>
+    <div class="vr_2"></div> -->
+
     <!-- Navbar Section -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar">
         <ul class="navbar_freelance">
             <img class="navbar_freelance_img" src="src/img/little_circle.png" alt="">
             <li class="navbar_freelance_title">Available For Freelance</li>
@@ -30,16 +31,17 @@
                 <span> Available for freelance</span>
             </li>
         </ul>
-        <!-- <div class="navbar_toggle">
+        <div class="navbar_toggle">
             <input type="checkbox" id="stopScrollingCheckbox">
             <span> </span>
             <span> </span>
             <span> </span>
-            <span> </span>
-        </div> -->
-        <div>
-            r
         </div>
+        <!-- <div class="navbar_toggle">
+            <div class="line_toggle half start"></div>
+            <div class="line_toggle"></div>
+            <div class="line_toggle half end"></div>
+        </div> -->
     </nav>
 
     <!-- Bottom Bar -->
@@ -51,21 +53,19 @@
     </ul> -->
 
     <!-- Hero Section -->
-    <div class="hero">
+    <!-- <div class="hero">
         <div class="hero_email" id="hiddenDiv" >ridwanndwip@gmail.com</div>
         <div class="hero_mainbanner">
-            <img src="src/img/mainbanner1.jpg" alt="Hero Mainbanner Img 1">
+            <img src="src/img/mainbanner1.jpg" alt="Hero Mainbanner Img 1"> -->
             <!-- <div class="hero_mainbanner_1"></div> -->
             <!-- <img src="src/img/mainbanner2.jpg" alt="Hero Mainbanner Img 2"> -->
-        </div>
+        <!-- </div>
         <div class="mouse_scroll">
                         <span class="m_scroll_arrows doi"></span>
                         <span class="m_scroll_arrows trei"></span>
                     </div>
             </div>
-    </div>
-
-
+    </div> -->
 
     <!-- Horizontal Line & Scroll Caption -->
     <!-- <div class="hr_1"></div>
@@ -152,42 +152,28 @@
         <span class="question_copyright">Design & built by <span class="yellow_text">ridwaanndwip</span> <br> Live to learn n leveling up</span>
     </div> -->
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- GSAP -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> -->
     <script src="src/index.js"></script>
-    <script>
-        AOS.init();
-        AOS.init({
-          duration: 2000, // values from 0 to 3000, with step 50ms
-        });
-      </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <script>
-        let prevScrollPos = window.pageYOffset;
-        const navbar = document.getElementById('navbar');
-      
-        window.onscroll = function() {
-          const currentScrollPos = window.pageYOffset;
-      
-          if (prevScrollPos > currentScrollPos) {
-            navbar.style.top = '0';
-          } else {
-            navbar.style.top = `-${navbar.offsetHeight}px`;
-          }
-      
-          prevScrollPos = currentScrollPos;
-        }
-      </script>
 
-      <script>
-        // window.addEventListener('scroll', function() {
-        // let div = document.getElementById('hiddenDiv');
-        //   if (window.scrollY > 300) {
-        //     div.style.opacity = '1';
-        //   } else {
-        //     div.style.opacity = '0';
-        //   }
-        // });
-      </script>
+    <script>
+    // gsap.registerPlugin(ScrollTrigger);
+
+    // const tl = gsap.timeline({
+    //     scrollTrigger:{
+    //         trigger:".hero_scroll",
+    //         start: "200 center",
+    //         end: "200 top",
+    //         scrub: 7,
+    //         // markers: true,
+    //     }
+    // });
+
+    // tl.to(".hero_scroll", {y:200, duration: 4})
+    // .to(".hero_scroll", {x:50, duration: 5});
+    </script>
+    
+
 </body>
 </html>

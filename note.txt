@@ -59,3 +59,43 @@ https://michalsnik.github.io/aos/
     data-aos-anchor-placement="top-center"
   >
   </div>
+
+
+// Javascript
+
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        AOS.init({
+          duration: 2000, // values from 0 to 3000, with step 50ms
+        });
+      </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.getElementById('navbar');
+      
+        window.onscroll = function() {
+          const currentScrollPos = window.pageYOffset;
+      
+          if (prevScrollPos > currentScrollPos) {
+            navbar.style.top = '0';
+          } else {
+            navbar.style.top = `-${navbar.offsetHeight}px`;
+          }
+      
+          prevScrollPos = currentScrollPos;
+        }
+      </script>
+
+      <script>
+        // window.addEventListener('scroll', function() {
+        // let div = document.getElementById('hiddenDiv');
+        //   if (window.scrollY > 300) {
+        //     div.style.opacity = '1';
+        //   } else {
+        //     div.style.opacity = '0';
+        //   }
+        // });
+      </script>

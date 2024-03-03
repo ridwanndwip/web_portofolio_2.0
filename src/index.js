@@ -22,59 +22,60 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-const content = document.querySelector(".content");
-const character = document.querySelector(".wrap");
 
-gsap
-  .timeline({
-    repeat: -1,
-    yoyo: true
-  })
-  .to(
-    character,
-    {
-      duration: 1,
-      y: -30,
-      easy: "sine.inOut"
-    },
-    0
-  );
+// const content = document.querySelector(".content");
+// const character = document.querySelector(".wrap");
 
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".page",
-      scrub: true,
-      start: "0% 0%",
-      end: "100% 100%"
-    }
-  })
+// gsap
+//   .timeline({
+//     repeat: -1,
+//     yoyo: true
+//   })
+//   .to(
+//     character,
+//     {
+//       duration: 1,
+//       y: -30,
+//       easy: "sine.inOut"
+//     },
+//     0
+//   );
 
-  .fromTo(
-    content,
-    {
-      xPercent: 0
-    },
-    {
-      xPercent: -67,
-      easy: "none"
-    },
-    0
-  )
+// gsap
+//   .timeline({
+//     scrollTrigger: {
+//       trigger: ".page",
+//       scrub: true,
+//       start: "0% 0%",
+//       end: "100% 100%"
+//     }
+//   })
 
-  .to(
-    character,
-    {
-      duration: 1,
-      rotation: 10,
-      x: -400,
-      easy: "sine.inOut"
-    },
-    0
-  );
+//   .fromTo(
+//     content,
+//     {
+//       xPercent: 0
+//     },
+//     {
+//       xPercent: -67,
+//       easy: "none"
+//     },
+//     0
+//   )
+
+//   .to(
+//     character,
+//     {
+//       duration: 1,
+//       rotation: 10,
+//       x: -400,
+//       easy: "sine.inOut"
+//     },
+//     0
+//   );
 
 //  AOS Animation
-AOS.init();
+// AOS.init();
 
 
 // SCROLL Navbar
