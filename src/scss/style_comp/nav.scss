@@ -1,11 +1,22 @@
 .navbar{
-    // background-color: aqua;
     @include flex(center,space-between,row);
-    padding: 4em 3.5em;
-    @include text(10px, 400);
+    padding: 4em 3em;
+    @include text(10px, 300);
     height: 0px;
-    // position: sticky;
     z-index: 2;
+    position: sticky;
+    background-color: $colorBlack;
+    // Update Sementara
+    transition: .2s ease-in-out;
+    // background-color: aqua;
+
+    @include responsive(xs){
+        padding: 4.5em 5em;
+    }
+
+    @include responsive(s){
+        padding: 5em 6em;
+    }
 
     & &_freelance{
         display: flex;
@@ -14,18 +25,21 @@
         
         &_title{
             list-style-type: none;
-            @include text(10px, 400);
-            color: $colorText;
-            letter-spacing: .5px;
+            color: $colorWhite;
+            letter-spacing: 1px;
+
+            @include responsive(s){
+            font-size: 12px;
+            }
         }
 
         &_img{
-        width: 6px;
-        height: 6px;
-        animation-name: circle;
-        animation-duration: 1.5s;
-        animation-iteration-count: infinite;
-        display: flex;
+            width: 7px;
+            height: 6px;
+            animation-name: circle;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            display: flex;
         }
 
         @include responsive(m){
@@ -37,9 +51,10 @@
     }
 
     & &_menu{
-        @include text(20px, 500);
+        @include text(20px, 400);
+        letter-spacing: 1px;
         gap: 1em;
-        background-color: $colorBgBody;
+        background-color: $colorGreen;
         top: 0;
         right: 0;
         position: absolute;
@@ -55,32 +70,7 @@
             list-style-type: none;
             a{
             text-decoration: none;
-            color: $colorText;
-            }
-        }
-
-        &_freelance{
-            margin-bottom: 7em;
-            position: absolute;
-            bottom: 0;
-            gap: .5em;
-            @include flex(center, center,row);
-            
-            @include responsive(m){
-                display: none;
-            }
-
-            span{
-                @include text(10px, 700);
-                color: $colorText;
-                letter-spacing: 1px;
-            }
-
-            &_img{
-                width: 8px;
-                animation-name: circle;
-                animation-duration: 1.5s;
-                animation-iteration-count: infinite;
+            color: $colorWhite;
             }
         }
 
@@ -102,7 +92,6 @@
         display: flex;
         flex-direction: column;
         z-index: 2;
-        position: relative;
         transition: transform 330ms ease-out;
 
         input{
@@ -115,13 +104,12 @@
         }
 
         span{
-            background-color: $colorText;
+            background-color: $colorWhite;
             height: 1.3px;
             width: 18px;
             border-radius: 20px;
             margin: 3.5px 0;
             transition: all .5s;
-            transition-timing-function: cubic-bezier(0.79,0.14,0.15,0.86);
 
             &:nth-child(2){
                 width: 7px;
@@ -131,6 +119,7 @@
         
             &:nth-child(3){
                 width: 20px;
+                transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
             }
 
             &:nth-child(4){
@@ -150,9 +139,6 @@
     & &_toggle:has(input:checked) span:nth-child(2){
         transform: rotate(-90deg) translateX(2px) translateY(3px);
     }
-    
-    & &_toggle:has(input:checked) span:nth-child(3){
-    }
 
     & &_toggle:has(input:checked) span:nth-child(4){
         transform: rotate(-90deg) translateX(-2px) translateY(-3px);
@@ -161,14 +147,12 @@
     & &_toggle:has(input:checked){
         transform: rotate(-45deg); 
     }
-
 }
 
 // condition navbar
 .navbar .navbar_menu.seret{
     transform: translateX(0);
     transition-timing-function: cubic-bezier(0.79,0.14,0.15,0.86);
-    // transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
 }
 
 @keyframes circle {
@@ -177,4 +161,4 @@
     50%  {opacity: 0;}
     75%  {opacity: .5;}
     100% {opacity: 1;}
-  }
+}

@@ -21,6 +21,21 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+let prevScrollPos = window.pageYOffset;
+const navbarScroll = document.getElementById('navbar');
+
+  window.onscroll = function() {
+    const currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos > currentScrollPos) {
+      navbarScroll.style.top = '0';
+    } else {
+      navbarScroll.style.top = `-${navbarScroll.offsetHeight}px`;
+    }
+
+    prevScrollPos = currentScrollPos;
+  }
+
 
 
 // const content = document.querySelector(".content");
