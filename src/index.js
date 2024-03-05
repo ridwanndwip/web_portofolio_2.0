@@ -1,3 +1,4 @@
+// Hamburger Menu
 const NavToggle = document.querySelector('.navbar_toggle input');
 const navbar = document.querySelector('.navbar_menu')
 
@@ -5,6 +6,8 @@ NavToggle.addEventListener('click', function(){
  navbar.classList.toggle('seret');
 });
 
+
+// Stop Scrolling while nav active
 document.addEventListener("DOMContentLoaded", function() {
     const stopScrollingCheckbox = document.getElementById("stopScrollingCheckbox");
 
@@ -21,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// Nav Down while User Scroll Down
 let prevScrollPos = window.pageYOffset;
 const navbarScroll = document.getElementById('navbar');
 
@@ -36,7 +40,21 @@ const navbarScroll = document.getElementById('navbar');
     prevScrollPos = currentScrollPos;
   }
 
+// GSAP
+  gsap.registerPlugin(ScrollTrigger);
 
+    const tl = gsap.timeline({
+        scrollTrigger:{
+            trigger:".hero_scroll",
+            start: "200 100",
+            end: "200 top",
+            scrub: 7,
+            markers: true,
+        }
+    });
+
+    tl.to(".hero_scroll", {y:200, duration: 4})
+    .to(".hero_scroll", {x:50, duration: 5});
 
 // const content = document.querySelector(".content");
 // const character = document.querySelector(".wrap");

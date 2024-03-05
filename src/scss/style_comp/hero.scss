@@ -1,41 +1,44 @@
 .hero{
     @include flex(center,space-between,row);
-    margin: 3em 3em 0 3em;
+    margin: 4em 3em 0 3em;
     @include text(10px, 300);
     // background-color: red;
 
-    & &_email{
-        // background-color: blue;
-        letter-spacing: 1px;
-        display: block;
-        writing-mode: vertical-rl;
-        // position: fixed;
-        // opacity: 0;
-    }
-
     & &_mainbanner{
-        // @include flex(default,default,default);
-        // background-color: aqua;
-        // height: 200px;
-        // width: 600px;
-        // overflow: hidden;
+        display: flex;
+        overflow-x: hidden;
+        margin-left: 1em;
 
-        &:nth-child(2){
-            
+        &_1{
+            background-image: url('/src/img/mainbanner2.jpg');
+            width: 90px;
+            height: 200px;
+            margin-top: 50%;
+            position: relative;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            z-index: 1;
+            filter: grayscale(100%);
+    
+            &:hover{
+                width: 400px;
+            }
         }
-    }
-
-    .hero_mainbanner_1{
-        background-image: url('/src/img/mainbanner1.jpg');
-            background-repeat:no-repeat;
-            background-size:contain;
-            height:200px;width:1200px;
-    }
-
-    & &_scroll{
-        background-color: purple;
-        letter-spacing: 1.5px;
-        display: block;
-        writing-mode: vertical-rl;
+        
+        &_2{
+            background-image: url('/src/img/mainbanner1.jpg');
+            width: 200px;
+            height: 450px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            margin-left: -5em;
+    
+            &:hover{
+                width: 400px;
+            }
+        }
     }
 }

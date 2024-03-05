@@ -291,27 +291,42 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  margin: 3em 3em 0 3em;
+  margin: 4em 3em 0 3em;
   font-size: 10px;
   font-weight: 300;
 }
-.hero .hero_email {
-  letter-spacing: 1px;
-  display: block;
-  writing-mode: vertical-rl;
+.hero .hero_mainbanner {
+  display: flex;
+  overflow-x: hidden;
+  margin-left: 1em;
 }
 .hero .hero_mainbanner_1 {
-  background-image: url("/src/img/mainbanner1.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-image: url("/src/img/mainbanner2.jpg");
+  width: 90px;
   height: 200px;
-  width: 1200px;
+  margin-top: 50%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+  filter: grayscale(100%);
 }
-.hero .hero_scroll {
-  background-color: purple;
-  letter-spacing: 1.5px;
-  display: block;
-  writing-mode: vertical-rl;
+.hero .hero_mainbanner_1:hover {
+  width: 400px;
+}
+.hero .hero_mainbanner_2 {
+  background-image: url("/src/img/mainbanner1.jpg");
+  width: 200px;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin-left: -5em;
+}
+.hero .hero_mainbanner_2:hover {
+  width: 400px;
 }
 
 .about {
