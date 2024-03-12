@@ -45,16 +45,18 @@ const navbarScroll = document.getElementById('navbar');
 
     const tl = gsap.timeline({
         scrollTrigger:{
-            trigger:".hero_scroll",
-            start: "200 100",
-            end: "200 top",
-            scrub: 7,
+            trigger:".hero",
+            start: "top 100",
+            end: "400 top",
+            scrub: 1,
             markers: true,
+            pin: true,
+            yoyo:true,
         }
     });
 
-    tl.to(".hero_scroll", {y:200, duration: 4})
-    .to(".hero_scroll", {x:50, duration: 5});
+    tl.to(".hero_mainbanner_1", {width:0, duration: 2})
+    .to(".hero_mainbanner_2", {width:0, duration: 2});
 
 // const content = document.querySelector(".content");
 // const character = document.querySelector(".wrap");
