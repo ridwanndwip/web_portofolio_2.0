@@ -171,6 +171,7 @@
 }
 .mouse_scroll {
   display: block;
+  background-color: aqua;
 }
 
 .m_scroll_arrows {
