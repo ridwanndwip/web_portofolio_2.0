@@ -43,7 +43,7 @@ const navbarScroll = document.getElementById('navbar');
 // GSAP
   gsap.registerPlugin(ScrollTrigger);
 
-    const tl = gsap.timeline({
+    const tlMainbanner = gsap.timeline({
         scrollTrigger:{
             trigger:".hero",
             start: "top 100",
@@ -51,12 +51,27 @@ const navbarScroll = document.getElementById('navbar');
             scrub: 1,
             markers: true,
             pin: true,
-            yoyo:true,
+            // yoyo:true,
         }
     });
 
-    tl.to(".hero_mainbanner_1", {width:0, duration: 2})
-    .to(".hero_mainbanner_2", {width:0, duration: 2});
+    tlMainbanner.to(".hero", {opacity:0, duration: 2});
+    // .to(".hero_text_1", {x:100, duration: 2},"<");
+    
+    const tlText = gsap.timeline({
+      scrollTrigger:{
+          trigger:".hero",
+          start: "top 100",
+          end: "400 top",
+          scrub: 1,
+          markers: true,
+          // pin: true,
+          // yoyo:true,
+      }
+  });
+
+  tlMainbanner.to(".hero_text_1", {y:20, duration: 2})
+  .to(".hero_text_2", {y:20, duration: 2},"<");
 
 // const content = document.querySelector(".content");
 // const character = document.querySelector(".wrap");
