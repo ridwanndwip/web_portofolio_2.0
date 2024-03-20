@@ -1,44 +1,45 @@
 // Hamburger Menu
-const NavToggle = document.querySelector('.navbar_toggle input');
-const navbar = document.querySelector('.navbar_menu')
+// const NavToggle = document.querySelector('.navbar_toggle input');
+// const navbar = document.querySelector('.navbar_menu')
 
-NavToggle.addEventListener('click', function(){
- navbar.classList.toggle('seret');
-});
+// NavToggle.addEventListener('click', function(){
+//  navbar.classList.toggle('seret');
+// });
 
 
 // Stop Scrolling while nav active
-document.addEventListener("DOMContentLoaded", function() {
-    const stopScrollingCheckbox = document.getElementById("stopScrollingCheckbox");
+// document.addEventListener("DOMContentLoaded", function() {
+//     const stopScrollingCheckbox = document.getElementById("stopScrollingCheckbox");
 
-    stopScrollingCheckbox.addEventListener("change", function() {
-        const body = document.body;
+//     stopScrollingCheckbox.addEventListener("change", function() {
+//         const body = document.body;
 
-        if (this.checked) {
+//         if (this.checked) {
             // Disable scrolling
-            body.style.overflowY = "hidden";
-        } else {
+        //     body.style.overflowY = "hidden";
+        // } else {
             // Enable scrolling
-            body.style.overflowY = "auto";
-        }
-    });
-});
+//             body.style.overflowY = "auto";
+//         }
+//     });
+// });
 
 // Nav Down while User Scroll Down
-let prevScrollPos = window.pageYOffset;
-const navbarScroll = document.getElementById('navbar');
 
-  window.onscroll = function() {
-    const currentScrollPos = window.pageYOffset;
+// let prevScrollPos = window.pageYOffset;
+// const navbarScroll = document.getElementById('navbar');
 
-    if (prevScrollPos > currentScrollPos) {
-      navbarScroll.style.top = '0';
-    } else {
-      navbarScroll.style.top = `-${navbarScroll.offsetHeight}px`;
-    }
+//   window.onscroll = function() {
+//     const currentScrollPos = window.pageYOffset;
 
-    prevScrollPos = currentScrollPos;
-  }
+//     if (prevScrollPos > currentScrollPos) {
+//       navbarScroll.style.top = '0';
+//     } else {
+//       navbarScroll.style.top = `-${navbarScroll.offsetHeight}px`;
+//     }
+
+//     prevScrollPos = currentScrollPos;
+//   }
 
 // GSAP
   gsap.registerPlugin(ScrollTrigger);
@@ -46,8 +47,8 @@ const navbarScroll = document.getElementById('navbar');
     const tlMainbanner = gsap.timeline({
         scrollTrigger:{
             trigger:".hero",
-            start: "top 100",
-            end: "400 top",
+            start: "top 180",
+            end: "130 100",
             scrub: 1,
             markers: true,
             pin: true,
@@ -56,22 +57,8 @@ const navbarScroll = document.getElementById('navbar');
     });
 
     tlMainbanner.to(".hero", {opacity:0, duration: 2});
-    // .to(".hero_text_1", {x:100, duration: 2},"<");
-    
-    const tlText = gsap.timeline({
-      scrollTrigger:{
-          trigger:".hero",
-          start: "top 100",
-          end: "400 top",
-          scrub: 1,
-          markers: true,
-          // pin: true,
-          // yoyo:true,
-      }
-  });
-
-  tlMainbanner.to(".hero_text_1", {y:20, duration: 2})
-  .to(".hero_text_2", {y:20, duration: 2},"<");
+    tlMainbanner.to(".hero_text_1", {y:20, duration: 2},"<")
+    .to(".hero_text_2", {x:20, duration: 2},"<");
 
 // const content = document.querySelector(".content");
 // const character = document.querySelector(".wrap");

@@ -1,13 +1,11 @@
 .hero{
     background-image: url('/src/img/blackCat_background.png');
     width: 230px;
-    // top: 30;
     margin: auto;
-    margin-top: 20%;
-    // position: relative;
+    margin-top: 45%;
     background-repeat: no-repeat;
     background-position: center;
-    filter: grayscale(100%);
+    filter: grayscale(50%);
     background-size: cover;
     z-index: 1;
     height: 230px;
@@ -55,6 +53,18 @@
 }
 
 .hero_text{
+    z-index: 3;    
     position: fixed;
-    top: 0;
+    top: 5em;
+    @include text(50px, 500);
+    // background-color: aqua;
+}
+
+.hero_text_1{
+    display: block;
+}
+
+.hero_text_2{
+    margin-top: 1.3em;
+    display: block;
 }
