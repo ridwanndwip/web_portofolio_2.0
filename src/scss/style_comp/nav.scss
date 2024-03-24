@@ -7,7 +7,7 @@
     @include flex(center,space-between,row);
     top: 30px;
     padding: 1.5em 2em;
-    @include text(10px, 400);
+    @include text(10px, 200);
     z-index: 2;
     position: fixed;
     width: 28em;

@@ -47,8 +47,8 @@
     const tlMainbanner = gsap.timeline({
         scrollTrigger:{
             trigger:".hero",
-            start: "top 180",
-            end: "130 100",
+            start: "60 210",
+            end: "150 100",
             scrub: 1,
             markers: true,
             pin: true,
@@ -56,9 +56,9 @@
         }
     });
 
-    tlMainbanner.to(".hero", {opacity:0, duration: 2});
-    tlMainbanner.to(".hero_text_1", {y:20, duration: 2},"<")
-    .to(".hero_text_2", {x:20, duration: 2},"<");
+    tlMainbanner.to(".hero", {opacity:0, duration: 1})
+    tlMainbanner.to(".hero_text", {y:20, duration: 2});
+    // .to(".hero_text_2", {x:20, duration: 2},"<");
 
 // const content = document.querySelector(".content");
 // const character = document.querySelector(".wrap");

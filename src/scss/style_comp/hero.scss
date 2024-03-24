@@ -2,69 +2,19 @@
     background-image: url('/src/img/blackCat_background.png');
     width: 230px;
     margin: auto;
-    margin-top: 45%;
+    margin-top: 9em;
     background-repeat: no-repeat;
     background-position: center;
     filter: grayscale(50%);
     background-size: cover;
     z-index: 1;
     height: 230px;
-    display: flex;
-    // background-color: red;
-    // align-self: center;
-    // & &_mainbanner{
-        
-    //     display: flex;
-    //     overflow-x: hidden;
-        // margin-left: 1em;
+    @include flex(center, flex-end, column);
 
-//         &_1{
-//             background-image: url('/src/img/mainbanner2.jpg');
-//             width: 90px;
-//             height: 200px;
-//             margin-top: 50%;
-//             position: relative;
-//             background-repeat: no-repeat;
-//             background-position: center;
-//             background-size: cover;
-//             z-index: 1;
-//             filter: grayscale(100%);
-    
-//             &:hover{
-//                 width: 400px;
-//             }
-//         }
-        
-//         &_2{
-//             background-image: url('/src/img/mainbanner1.jpg');
-//             width: 200px;
-//             height: 450px;
-//             background-repeat: no-repeat;
-//             background-position: center;
-//             background-size: cover;
-//             position: relative;
-//             margin-left: -5em;
-    
-//             &:hover{
-//                 width: 400px;
-//             }
-//         }
-//     }
-}
-
-.hero_text{
-    z-index: 3;    
-    position: fixed;
-    top: 5em;
-    @include text(50px, 500);
-    // background-color: aqua;
-}
-
-.hero_text_1{
-    display: block;
-}
-
-.hero_text_2{
-    margin-top: 1.3em;
-    display: block;
+    .hero_text{
+        position: relative;
+        top: 6em;
+        @include text(20px, 200);
+        letter-spacing: 1px;
+    }
 }

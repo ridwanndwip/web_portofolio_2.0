@@ -13,7 +13,7 @@
   top: 30px;
   padding: 1.5em 2em;
   font-size: 10px;
-  font-weight: 400;
+  font-weight: 200;
   z-index: 2;
   position: fixed;
   width: 28em;
@@ -89,7 +89,7 @@
   background-image: url("/src/img/blackCat_background.png");
   width: 230px;
   margin: auto;
-  margin-top: 45%;
+  margin-top: 9em;
   background-repeat: no-repeat;
   background-position: center;
   filter: grayscale(50%);
@@ -97,25 +97,104 @@
   z-index: 1;
   height: 230px;
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.hero .hero_text {
+  position: relative;
+  top: 6em;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 1px;
 }
 
-.hero_text {
-  z-index: 3;
-  position: fixed;
-  top: 5em;
-  font-size: 50px;
-  font-weight: 500;
-}
-
-.hero_text_1 {
+.mouse_scroll {
   display: block;
+  position: relative;
+  top: 11em;
 }
 
-.hero_text_2 {
-  margin-top: 1.3em;
+.m_scroll_arrows {
   display: block;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-right: 0.2px solid white;
+  border-bottom: 0.2px solid white;
+  margin: 0 0 5px 0;
+  width: 8px;
+  height: 8px;
 }
 
+.doi, .trei {
+  -webkit-animation: mouse-scroll 1s infinite;
+  -moz-animation: mouse-scroll 1s infinite;
+  animation: mouse-scroll 1s infinite;
+}
+
+.doi {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -webkit-animation-direction: alternate;
+  animation-delay: 0.2s;
+  animation-direction: alternate;
+  margin-top: 1px;
+}
+
+.trei {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -webkit-animation-direction: alternate;
+  animation-delay: 0.3s;
+  animation-direction: alternate;
+  margin-top: -6px;
+}
+
+@-webkit-keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 body {
   background-color: #000000;
   font-family: "montserrat", sans-serif;
