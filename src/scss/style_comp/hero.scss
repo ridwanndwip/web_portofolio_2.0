@@ -1,6 +1,6 @@
 .hero{
     background-image: url('/src/img/blackCat_background.png');
-    width: 230px;
+    width: 250px;
     margin: auto;
     margin-top: 9em;
     background-repeat: no-repeat;
@@ -8,14 +8,14 @@
     filter: grayscale(50%);
     background-size: cover;
     z-index: 1;
-    height: 230px;
+    height: 250px;
     // @include flex(center, flex-end, column);
     background-color: aqua;
 }
 
 
 .hero_text{
-    margin-top: -9em;
+    margin-top: -13em;
     z-index: 2;
     text-align: center;
     // display: flex;
@@ -29,7 +29,7 @@
     // text-align: center;
     // left: 50%;
     // position: fixed;
-    @include text(20px, 200);
-    letter-spacing: 1px;
+    @include text(15px, 200);
+    // letter-spacing: 1px;
     // background-color: aqua;
 }
