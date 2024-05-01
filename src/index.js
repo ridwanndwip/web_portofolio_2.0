@@ -57,22 +57,38 @@
     });
 
     tlMainbanner.to(".hero", {opacity:0, duration: .7});
-    // .to(".hero_text", {x:20, duration: 1},);
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const tlScrolll = gsap.timeline({
+        scrollTrigger:{
+            trigger:".hero",
+            start: "80 250",
+            end: "200 20",
+            scrub: 1,
+            // markers: true,
+            pin: true,
+            // yoyo:true,
+        }
+    });
+
+    tlMainbanner.to(".hero", {opacity:0, duration: .7});
+    // .to(".hero_text", {opacit, duration: 1},);
 
     // const tlHeroText = gsap.timeline({
     //     scrollTrigger:{
     //         trigger:".hero_text",
-    //         start: "top 460",
+    //         start: "top 560",
     //         end: "top 150",
     //         scrub: 1,
     //         markers: true,
     //         pin: true,
-    //         yoyo:true,
+    //         yoyo:true
     //     }
     // });
 
     // tlHeroText.to(".hero_text", {opacity:0, duration: 1});
-    // tlMainbanner.to(".hero_text", {y:20, duration: 1});
+    // .to(".hero_text", {y:20, duration: 1});
 
     // .to(".hero_text_2", {x:20, duration: 2},"<");
 
