@@ -6,6 +6,9 @@
     filter: grayscale(100);
     background-size: cover;
     z-index: 1;
-    height: 300px;
+    height: 200px;
     text-align: center;
+    @include text(32px, 200);
+    color: $color4;
+    padding: 85px 10px 0 10px;
 }

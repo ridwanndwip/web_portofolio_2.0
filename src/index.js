@@ -48,31 +48,31 @@
         scrollTrigger:{
             trigger:".hero",
             start: "80 250",
-            end: "200 20",
+            end: "top 50",
             scrub: 1,
             // markers: true,
             pin: true,
-            // yoyo:true,
+            yoyo:true,
         }
     });
 
-    tlMainbanner.to(".hero", {opacity:0, duration: .7});
+    tlMainbanner.to(".hero", {opacity:0, duration: .3});
 
-    gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollTrigger);
 
-    const tlScrolll = gsap.timeline({
-        scrollTrigger:{
-            trigger:".hero",
-            start: "80 250",
-            end: "200 20",
-            scrub: 1,
+    // const tlScrolll = gsap.timeline({
+        // scrollTrigger:{
+            // trigger:".hero",
+            // start: "80 250",
+            // end: "200 20",
+            // scrub: 1,
             // markers: true,
-            pin: true,
+            // pin: true,
             // yoyo:true,
-        }
-    });
+        // }
+    // });
 
-    tlMainbanner.to(".hero", {opacity:0, duration: .7});
+    // tlMainbanner.to(".hero", {opacity:0, duration: .7});
     // .to(".hero_text", {opacit, duration: 1},);
 
     // const tlHeroText = gsap.timeline({
