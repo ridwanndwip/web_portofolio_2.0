@@ -1,0 +1,22 @@
+.about{
+    @include flex(center,center,column);
+    gap: 2em;
+    margin-top: 3em;
+
+    & &_caption{
+        // background-color: red;
+        @include text(64px, 200);
+    }
+
+    & &_title{
+        @include text(15px, 100);
+        line-height: 180%;
+        text-align: center;
+        padding: 0 1.5em;
+    }
+
+    & &_marquee{
+        font-family: "Fira Code", monospace;
+        @include text(15px, 300);
+    }
+}
