@@ -1,0 +1,12 @@
+grid-template-column = menentukan jumlah dan size column
+grid-template-row = menentukan jumlah dan size row/baris
+grid-auto-row = menentukan size row yang implicit
+grid-auto-column = menentukan size column yang implicit
+grid-auto-flow = menentukan arah column atau row
+
+implicit = garis yang tidak termasuk di dalam grid
+explicit = garis yang termasuk dalam grid container
+
+Grid Line Name
+-------------------
+

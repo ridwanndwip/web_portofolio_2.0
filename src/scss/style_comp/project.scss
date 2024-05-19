@@ -1,13 +1,43 @@
 .project{
   display: grid;
   width: 100%;
+  grid-gap: 2em;
+  grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+
+
+  & &_item{
+    // margin: 2em;
+    // background-color: red;
+    
+    background-image: url("/src/img/tinified/205.jpg");
+    list-style-type: none;
+    // border-radius: 40px;
+    // width: 80%;
+    height: 200px;
+    // display: flex;
+    @include flex(center, center,column);
+
+  }
+
+  & &_card{
+    background-color: green;
+    text-decoration: none;
+    color: black;
+    // display: flex;
+  }
+
+  & &_button{
+    img{
+      width: 20%;
+    }
+  }
 
 }
 
 .grid {
     display:grid;
-    width:100%;
-    // max-width:1000px;
+    width:90%;
+    max-width:1000px;
     padding:0;
     list-style-type:none;
     

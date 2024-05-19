@@ -228,9 +228,33 @@
   font-weight: 300;
 }
 
-.grid {
+.project {
   display: grid;
   width: 100%;
+  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.project .project_item {
+  background-image: url("/src/img/tinified/205.jpg");
+  list-style-type: none;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.project .project_card {
+  background-color: green;
+  text-decoration: none;
+  color: black;
+}
+.project .project_button img {
+  width: 20%;
+}
+
+.grid {
+  display: grid;
+  width: 90%;
   max-width: 1000px;
   padding: 0;
   list-style-type: none;
