@@ -1,197 +1,70 @@
 .project{
-    padding: 7em 20% 0 20%;
-    @include flex(flex-start,center,column);
-    gap: 2em;
-
-    @include responsive(xs){
-        padding: 0 22% 0 22%; 
-    }
-
-    @include responsive(m){
-        padding: 0 5em 0 7%;
-        margin-left: 10%;
-    }
-
-    &_card_left{
-        // color: $colorText;
-        @include flex(flex-start, space-evenly, column);
-
-        &_title{
-            @include flex(flex-start,flex-start,column);
-            gap: .5em;
-            margin-bottom: -6em;
-            width: 87%;
-            margin-left: 1em;
-            line-height: 17px;
-            @include responsive(s){
-                margin-bottom: -4em;
-                width: 70%;                
-                margin-left: -35px;
-            }
-
-            & &_caption{
-                display: block;
-                @include text(13px, 500);
-                @include responsive(s){
-                    font-size: 15px;
-                }
-            }
-
-            & &_desc{
-                display: block;
-                @include text(10px, 300);
-
-                @include responsive(s){
-                    font-size: 11px;
-                }
-            }
-
-            & &_button{
-                    // border: 1px solid $colorText;
-                    padding: .3em 2.5em;
-                    display: block;
-                    // color: $colorGreen;
-                    text-decoration: none;
-                    @include text(10px,300);
-
-                    @include responsive(s){
-                        font-size: 13px;
-                        margin-top: 5px
-                    }
-                }
-        }
-
-        &_image{
-            @include flex(center, center, column);
-
-            & &_portofolio{
-                z-index: -2;
-                width: 100%;
-                opacity: .4;
-                height: 100px;
-                @include responsive(s){
-                    width: 110%;
-                    height: 110px;
-                }    
-            }
-
-            & &_powerButton{
-                width: 20px;
-                align-self: flex-end;
-                opacity: 1;
-                margin-top: -2em;
-                margin-right: 1em;
-                @include responsive(s){
-                    margin-right: -.4em;
-                    margin-top: -2em;
-                    width: 20px;
-                }
-            }
-            
-            @include responsive(m){
-                align-items: flex-start;
-            }
-        }
-
-        & &_date{
-            display: block;
-            margin-top: 1.2em;
-            @include text(16px, 300);
-
-            @include responsive(s){
-                font-size: 18px;
-                margin-left: -4%;
-            }
-        }
-    }
-
-// ------------------------------------
-
-    &_card_right{
-        @include flex(flex-end, flex-end, column);
-
-        &_title{
-            @include flex(flex-end, flex-end, column);
-            gap: .5em;
-            margin-bottom: -5em;
-            width: 87%;
-            margin-right: -10px;
-            line-height: 17px;
-            @include responsive(s){
-                margin-bottom: -4em;
-                width: 70%;                
-                margin-right: -35px;
-            }
-
-            & &_caption{
-                display: block;
-                @include text(13px, 500);
-                @include responsive(s){
-                    font-size: 15px;
-                }    
-            }
-
-            & &_desc{
-                display: block;
-                @include text(10px, 100);
-                text-align: right;
-
-                @include responsive(s){
-                    font-size: 10px;
-                    line-height: 15px;
-                }
-            }
-
-            & &_button{
-                    // border: 2px solid $colorText;
-                    padding: .3em 2.5em;
-                    display: block;
-                    // color: $colorText;
-                    text-decoration: none;
-                    @include text(10px,100);
-
-                    @include responsive(s){
-                        font-size: 13px;
-                        margin-top: 5px
-                    }
-                }
-        }
-
-        &_image{
-            @include flex(center, center, column);
-
-            & &_portofolio{
-                width: 100%;
-                opacity: .2;
-                height: 90px;
-                @include responsive(s){
-                    width: 110%;
-                    height: 110px;
-                }     
-            }
-
-            & &_powerButton{
-                align-self: flex-start;
-                opacity: .9;
-                margin-top: -1.6em;
-                margin-left: .5em;
-                @include responsive(s){
-                    margin-left: -.4em;
-                    margin-top: -2em;
-                    width: 20px;
-                }
-            }
-        }
-
-        & &_date{
-            display: block;
-            margin-top: 1.2em;
-            @include text(16px, 100);
-            @include responsive(s){
-                font-size: 18px;
-                margin-right: -4.5%;
-            }
-        }
-    }
+  display: grid;
+  width: 100%;
 
 }
+
+.grid {
+    display:grid;
+    width:100%;
+    // max-width:1000px;
+    padding:0;
+    list-style-type:none;
+    
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap:2rem;
+  }
+  
+  @media screen and (min-width: 768px){
+    .grid__item:first-child{
+      grid-column: span 2;
+    }
+  }
+  
+  .card {
+    background-color: white;
+    text-decoration: none;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition:transform .1s ease-in;
+    
+    display:flex;
+    flex-direction:column;
+    min-height:100%;
+    
+    &:hover,
+    &:focus {
+      box-shadow: 0 4px 10px 0 rgba(0,0,0,.16);
+      transform:scale(1.025);
+    }
+    
+    &__image {
+      img {
+        width:100%;
+        height:250px;
+        object-fit:cover;
+      }
+    }
+    
+    &__content {
+      padding:1rem;
+      display:flex;
+      flex-direction:column;
+      flex:1;
+    }
+    
+    &__title {
+      margin:0;
+    }
+    
+    &__body {
+      flex:1;
+    }
+    
+    &__footer {
+      text-transform:uppercase;
+      font-size:.75rem;
+      color:#666;
+      font-weight:600;
+    }
+  }
