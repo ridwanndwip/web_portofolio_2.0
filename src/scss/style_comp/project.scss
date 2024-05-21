@@ -6,7 +6,7 @@
 
 
   & &_item{
-    // margin: 2em;
+    margin: 0 1em;
     // background-color: red;
     
     background-image: url("/src/img/tinified/205.jpg");
@@ -15,18 +15,31 @@
     // width: 80%;
     height: 200px;
     // display: flex;
-    @include flex(center, center,column);
+    @include flex(center,flex-end,column);
+    border-radius: 20px;
+  }
 
+  & &_title{
+    margin-left: 20px;
+    span{
+      &:first-child{
+        display: block;
+      }
+    }
   }
 
   & &_card{
     background-color: green;
     text-decoration: none;
     color: black;
-    // display: flex;
+    width: 100%;
+    @include flex(center,space-between,row);
+    border-radius: 0 0 20px 20px;
+    height: 80px
   }
 
   & &_button{
+    @include flex(flex-end,flex-end,column);
     img{
       width: 20%;
     }

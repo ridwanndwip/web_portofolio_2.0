@@ -235,18 +235,39 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .project .project_item {
+  margin: 0 1em;
   background-image: url("/src/img/tinified/205.jpg");
   list-style-type: none;
   height: 200px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: column;
+  border-radius: 20px;
+}
+.project .project_title {
+  margin-left: 20px;
+}
+.project .project_title span:first-child {
+  display: block;
 }
 .project .project_card {
   background-color: green;
   text-decoration: none;
   color: black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: 0 0 20px 20px;
+  height: 80px;
+}
+.project .project_button {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 .project .project_button img {
   width: 20%;
