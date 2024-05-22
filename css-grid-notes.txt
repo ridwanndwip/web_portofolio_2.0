@@ -7,6 +7,48 @@ grid-auto-flow = menentukan arah column atau row
 implicit = garis yang tidak termasuk di dalam grid
 explicit = garis yang termasuk dalam grid container
 
-Grid Line Name
--------------------
+repeat = membuat kolom atau baris yang berulang, contoh :
+GTR / GTC : repeat(3 1fr) = mengulang 3 baris ukuran 1 fr.
+min-content & max-content = untuk memberikan nilai minimal dan maximal pada konten yang ada di dalam grid.
 
+auto-fill & auto-fit = menentukan jumlah item yang berada dalam grid track (biasanya digunakan dalam repeat).
+contoh :
+grid-template-columns: repeat(auto-fill, minmax(200px, 2fr)); 
+
+minmax = untuk menentukan minimal dan maksimal ukuran item pada grid.
+grid-template-columns: repeat(auto-fill, minmax(200px, 2fr)); 
+
+Grid template area = mendefinisikan grid template menggunakan nama dari area yang ditulis pada property grid-area pada item.
+contoh :
+
+.container{
+    gtc : 1fr 1fr 1fr;
+    gta : 
+    'header header header'
+    'sidebar content content'
+    'sidebar content content'
+    'footer footer footer';
+}
+
+<div class="header">header</div>
+<div class="sidebar">sidebar</div>
+<div class="content">content</div>
+<div class="footer">footer</div>
+
+.header{
+    grid-area : header;
+}
+
+Grid Column & Grid Row = menentukan size atau jumlah kolom & row pada item grid.
+contoh = 
+
+.item{
+    grid-column-start : <nomor> | <nama> | span <nomor> | span <nama> | auto;
+    grid-column-end : <nomor> | <nama> | span <nomor> | span <nama> | auto;
+    grid-row-start : <nomor> | <nama> | span <nomor> | span <nama> | auto;
+    grid-row-end : <nomor> | <nama> | span <nomor> | span <nama> | auto;
+}
+
+- <nomor> | <nama> : mengacu pada nomor atau nama yang kita beri pada grid line.
+- span <nomor> : item akan memanjang / melebear sampai sejumlah <nomor>.
+- span <nama> : item akan memanjang /melebar sampai ke nama grid line tertentu.

@@ -2,10 +2,24 @@
   display: grid;
   width: 90%;
   grid-gap: 2em;
-  grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+  // grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+  // grid-template-columns: repeat(1, 1fr) repeat(1, 2fr);
+  // grid-template-columns: 1fr 1fr 2fr 2fr 2fr;
+  // grid-template-rows: repeat(1, 2fr) repeat(1, 3fr);
+  // grid-template-rows: 2fr 2fr 3fr 3fr;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
   margin: 0 auto;
 
+  @include responsive(m){
+    & &_item{
+      &:first-child{
+        grid-column: span 2;
+      }
+    }
+  }
+
   & &_item{
+  // width: 200px;
     // margin: 0 1.5em;
     background-image: url("/src/img/tinified/website-mockup-psd.jpg");
     list-style-type: none;
